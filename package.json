@@ -1,0 +1,23 @@
+{
+  "name": "pathofgod",
+  "version": "1.0.0",
+  "description": "Addon for Path of Exile",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vkaike2/PathOfGod.git"
+  },
+  "author": "Victor Kaike Cezemer Peixoto",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vkaike2/PathOfGod/issues"
+  },
+  "homepage": "https://github.com/vkaike2/PathOfGod#readme",
+  "dependencies": {
+    "electron": "^2.0.2"
+  }
+}
