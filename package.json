@@ -19,6 +19,8 @@
   "homepage": "https://github.com/vkaike2/PathOfGod#readme",
   "dependencies": {
     "electron": "^2.0.2",
-    "jquery": "^3.3.1"
+    "fs": "0.0.1-security",
+    "jquery": "^3.3.1",
+    "jsonfile-promised": "0.0.1"
   }
 }

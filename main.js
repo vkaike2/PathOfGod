@@ -1,5 +1,7 @@
-const { app, BrowserWindow, ipcMain, globalShortcut } = require('electron');
+const { app, BrowserWindow, ipcMain, globalShortcut, clipboard, shell} = require('electron');
+const data = require('./data');
 
+let numTeclado = 0;
 
 app.on('ready', () => {
     console.log("Aplicacao iniciada");
@@ -7,18 +9,28 @@ app.on('ready', () => {
         width: 600,
         height: 800
     });
-
     mainWindow.loadURL(`file://${__dirname}/app/index.html`);
 });
 
-//Exemplo de atalho
 app.on('ready', () => {
-    globalShortcut.register('CommandOrControl+X', () => {
-      console.log('CommandOrControl+X is pressed')
+    // CommandOrControl
+    globalShortcut.register('F', () => {
+        if(numTeclado == 0){
+            shell.openItem('teclado.ahk');
+            numTeclado++
+        }else if(numTeclado == 1){
+            shell.openItem('teclado1.ahk');
+            numTeclado++;
+        }else{
+            shell.openItem('teclado2.ahk');
+            numTeclado = 0;
+        }
+        console.log(clipboard.readText('selection'));
+        data.salvaDados(clipboard.readText('selection'));
     })
 });
 
-//Exemplo de requisicao
-ipcMain.on('requisicao-teste', () =>{
+
+ipcMain.on('requisicao-teste', (event) =>{
     console.log('vamos mamar Cabrito');
 });

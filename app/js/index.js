@@ -1,4 +1,4 @@
-const { ipcRenderer, shell } = require('electron');
+const { ipcRenderer, shell} = require('electron');
 
 
 window.onload = function(){
