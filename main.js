@@ -1,5 +1,5 @@
 const { app, BrowserWindow, ipcMain, globalShortcut, clipboard, shell} = require('electron');
-const data = require('./data');
+const data = require('./meus_modulos/data');
 
 let numTeclado = 0;
 
@@ -25,7 +25,8 @@ app.on('ready', () => {
             shell.openItem('teclado2.ahk');
             numTeclado = 0;
         }
-        console.log(clipboard.readText('selection'));
+        sleep(100);
+        // console.log(clipboard.readText('selection'));
         data.salvaDados(clipboard.readText('selection'));
     })
 });
@@ -34,3 +35,12 @@ app.on('ready', () => {
 ipcMain.on('requisicao-teste', (event) =>{
     console.log('vamos mamar Cabrito');
 });
+
+function sleep(milliseconds) {
+    var start = new Date().getTime();
+    for (var i = 0; i < 1e7; i++) {
+      if ((new Date().getTime() - start) > milliseconds){
+        break;
+      }
+    }
+  }

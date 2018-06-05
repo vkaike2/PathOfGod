@@ -3,7 +3,7 @@ const fs = require('fs');
 
 module.exports = {
     salvaDados(conteudoItem){
-        let arquivo = __dirname + '/data/item.json'; 
+        let arquivo = __dirname + '/../data/item.json'; 
         if(fs.existsSync(arquivo)){
             this.adicionaItem(arquivo,conteudoItem);
         }else{
@@ -14,11 +14,19 @@ module.exports = {
         }
     },
     adicionaItem(arquivo, conteudoArquivo){
-        let raridade;
-        raridade = conteudoArquivo.split("\r\n")[0]
+        let nomeBase = "";
+        let nome = "";
+
+        if(conteudoArquivo.split("\r\n")[2] != "--------"){
+            nome = conteudoArquivo.split("\r\n")[1];
+            nomeBase = conteudoArquivo.split("\r\n")[2];
+        }else{
+            nomeBase = conteudoArquivo.split("\r\n")[1];
+        }
 
         let dados = {
-            rarity: raridade
+            nomeBase: nomeBase,
+            nome: nome
         }
         jsonfile.writeFile(arquivo, dados, {spaces: 2})
                 .then(()=>{

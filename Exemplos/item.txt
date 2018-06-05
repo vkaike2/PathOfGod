@@ -1,0 +1,19 @@
+Rarity: Rare
+Twisted Haven
+Alleyways Map
+--------
+Map Tier: 2
+Item Quantity: +63% (augmented)
+Item Rarity: +32% (augmented)
+Monster Pack Size: +21% (augmented)
+Quality: +8% (augmented)
+--------
+Item Level: 70
+--------
+Monsters reflect 13% of Elemental Damage
++20% Monster Physical Damage Reduction
+Unique Boss deals 15% increased Damage
+Unique Boss has 20% increased Attack and Cast Speed
+Players have 20% less Recovery Rate of Life and Energy Shield
+--------
+Travel to this Map by using it in the Templar Laboratory or a personal Map Device. Maps can only be used once.
