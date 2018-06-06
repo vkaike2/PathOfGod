@@ -1,5 +1,6 @@
 const jsonfile = require('jsonfile-promised');
 const fs = require('fs');
+const montaItem = require('./montaItem');
 
 module.exports = {
     salvaDados(conteudoItem){
@@ -14,20 +15,8 @@ module.exports = {
         }
     },
     adicionaItem(arquivo, conteudoArquivo){
-        let nomeBase = "";
-        let nome = "";
+        let dados = montaItem.montaMapa(conteudoArquivo);
 
-        if(conteudoArquivo.split("\r\n")[2] != "--------"){
-            nome = conteudoArquivo.split("\r\n")[1];
-            nomeBase = conteudoArquivo.split("\r\n")[2];
-        }else{
-            nomeBase = conteudoArquivo.split("\r\n")[1];
-        }
-
-        let dados = {
-            nomeBase: nomeBase,
-            nome: nome
-        }
         jsonfile.writeFile(arquivo, dados, {spaces: 2})
                 .then(()=>{
                     console.log('salvo com sucesso');

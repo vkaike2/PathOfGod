@@ -6,6 +6,6 @@ window.onload = function(){
    
 };
 
-ipcRenderer.on('resposta-teste',(envent, arg) => {
-    console.log(arg);
+ipcRenderer.on('item-copiado',(envent) => {
+    ipcRenderer.send('mostrar-item');
 });

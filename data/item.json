@@ -1,3 +1,9 @@
 {
-  "nome": "undefined"
+  "nomeBase": "Alleyways Map",
+  "nome": "Twisted Haven",
+  "tier": "+32% (augmented)",
+  "quality": "+21% ",
+  "options": {
+    "reflect": "Reflect elemental"
+  }
 }
