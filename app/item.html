@@ -5,10 +5,17 @@
     <title>Path of God</title>
 </head>
 <body>
-    <h1>ITEM</h1>
-
-    <script>
+    <h1 style="color:aliceblue">ITEM</h1>
+    <h1 style="color:black">ITEM</h1>
+    <script >
         window.$ = window.jQuery = require("jquery");
+
+        window.onload = function (){
+            $.getJSON( "../data/item.json", function( data ) {
+                console.log(data)
+            });
+
+        };
     </script>
 </body>
 </html>

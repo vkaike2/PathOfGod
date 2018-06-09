@@ -50,20 +50,27 @@ app.on('ready', () => {
                         +"Players have 20% less Recovery Rate of Life and Energy Shield"+"\r\n"
                         +"--------"+"\r\n"
                         +"Travel to this Map by using it in the Templar Laboratory or a personal Map Device. Maps can only be used once.")
-        abrirItem = true;
-        if(abrirItem){  
-            let itemWindow = new BrowserWindow({
-                width: 200,
-                height: 300
-            });
-                itemWindow.loadURL(`file://${__dirname}/app/item.html`);
-            abrirItem = false;
-        }
+
+        let itemWindow = null;
+        itemWindow = new BrowserWindow({
+            width: 200,
+            height: 300,
+            alwaysOnTop : true,
+            // transparent: true,
+            // frame: false
+        });
+        // itemWindow.setMenu(null);
+        itemWindow.loadURL(`file://${__dirname}/app/item.html`);
+
+        // setTimeout(() => {
+        //     itemWindow.close();
+        //     console.log('fechar');
+        // }, 1000);
     })
 });
 
 
-
+ 
 
 
 // function sleep(milliseconds) {
