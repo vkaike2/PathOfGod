@@ -1,9 +1,9 @@
 {
   "nomeBase": "Alleyways Map",
   "nome": "Twisted Haven",
-  "tier": "+32% (augmented)",
-  "quality": "+21% ",
+  "tier": "2",
+  "quality": "+8% ",
   "options": {
-    "reflect": "Reflect elemental"
+    "reflect": "Monsters reflect 13% of Elemental Damage"
   }
 }

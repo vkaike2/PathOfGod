@@ -1,10 +1,10 @@
 const jsonfile = require('jsonfile-promised');
 const fs = require('fs');
-const montaItem = require('./montaItem');
+const montaItem = require('./../util/montaItem');
 
 module.exports = {
     salvaDados(conteudoItem){
-        let arquivo = __dirname + '/../data/item.json'; 
+        let arquivo = __dirname + '/../../data/item.json'; 
         if(fs.existsSync(arquivo)){
             this.adicionaItem(arquivo,conteudoItem);
         }else{
@@ -15,7 +15,14 @@ module.exports = {
         }
     },
     adicionaItem(arquivo, conteudoArquivo){
-        let dados = montaItem.montaMapa(conteudoArquivo);
+        let dados ;
+        if(!conteudoArquivo.includes(" Map ") ){
+            dados = {
+                erro : "Thats not a map"
+            }
+        }else{
+            dados = montaItem.montaMapa(conteudoArquivo);
+        }
 
         jsonfile.writeFile(arquivo, dados, {spaces: 2})
                 .then(()=>{
