@@ -20,20 +20,21 @@ module.exports = {
                         numTeclado = 0;
                     }
                 setTimeout(() => {
-                    console.log(clipboard.readText('selection'));
+                    // console.log(clipboard.readText('selection'));
                     data.salvaDados(clipboard.readText('selection'));
         
                     let itemWindow = null;
                     itemWindow = new BrowserWindow({
                         width: 200,
                         height: 300,
-                        alwaysOnTop : true,
-                        transparent: true,
-                        frame: false
+                        alwaysOnTop : true
+                        // transparent: true,
+                        // frame: false
                     });
-                    itemWindow.loadURL(`file://${__dirname}/app/item.html`);
+                    console.log(__dirname);
+                    itemWindow.loadURL(`file://${__dirname}/../../../app/item.html`);
             
-                    setTimeout(() => {itemWindow.close();}, 1000);
+                    // setTimeout(() => {itemWindow.close();}, 1000);
                 }, 200);
             })
         });
