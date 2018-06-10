@@ -1,3 +1,9 @@
 {
-  "erro": "Thats not a map"
+  "nomeBase": "Alleyways Map",
+  "nome": "Twisted Haven",
+  "tier": "2",
+  "quality": "+8% ",
+  "options": {
+    "reflect": ""
+  }
 }
