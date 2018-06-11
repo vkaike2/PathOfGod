@@ -34,7 +34,8 @@ module.exports = {
             lessCurse: "",
             chaosResistence: "",
             elementalResistence: "",
-            avoidPoisonBlindBleed:""
+            avoidPoisonBlindBleed:"",
+            hexproof: ""
         }
 
         let blocoItem = conteudoItem.split("--------");
@@ -83,41 +84,43 @@ module.exports = {
             }else if(linha.includes("Nemesis Mod")){
                 options.Nemesis = linha;
             }else if(linha.includes("cannot be Stunned")){
-                option.cannotStunLife = linha;
+                options.cannotStunLife = linha;
             }else if(linha.includes("Physical Damage Reduction")){
-                option.physReduction = linha;
+                options.physReduction = linha;
             }else if(linha.includes("more Monster Life")){
-                option.monsterLife = linha;
+                options.monsterLife = linha;
             }else if(linha.includes("increased Monster Damage")){
-                option.monsterDamage = linha;
+                options.monsterDamage = linha;
             }else if(linha.includes("extra Damage as Fire")){
-                option.damageFire = linha;
+                options.damageFire = linha;
             }else if(linha.includes("extra Damage as Cold")){
-                option.damageCold
+                options.damageCold
             }else if(linha.includes("extra Damage as Lightning")){
-                option.damageLightning = linha;
+                options.damageLightning = linha;
             }else if(linha.includes("Movement Speed")){
-                option.monsterMovementSpeed = linha;
+                options.monsterMovementSpeed = linha;
             }else if(linha.includes("Attack Speed")){
-                option.monsterAttackSpeed = linha;
+                options.monsterAttackSpeed = linha;
             }else if(linha.includes("Cast Speed")){
-                option.monsterCastSpeed = linha;
+                options.monsterCastSpeed = linha;
             }else if(linha.includes("Boss deals")){
-                option.uniqueDamage = linha;
+                options.uniqueDamage = linha;
             }else if(linha.includes(("Boss has")) && linha.includes("increased")){
-                option.uniqueSpeed = linha;
+                options.uniqueSpeed = linha;
             }else if(linha.includes("Boss has") && linha.includes("increased Life")){
-                option.uniqueLife = linha;
+                options.uniqueLife = linha;
             }else if(linha.includes("Boss has") && linha.includes("Area of Effect")){
-                option.uniqueArea = linha;
+                options.uniqueArea = linha;
             }else if(linha.includes("less effect of Curses")){
-                option.lessCurse = linha;
+                options.lessCurse = linha;
             }else if(linha.includes("Chaos Resistence")){
-                option.chaosResistence = linha;
+                options.chaosResistence = linha;
             }else if(linha.includes("Elemental Resistence")){
-                option.elementalResistence = linha;
+                options.elementalResistence = linha;
             }else if(linha.includes("to avoid Poison")){
-                option.avoidPoisonBlindBleed = linha;
+                options.avoidPoisonBlindBleed = linha;
+            }else if(linha.includes("Hexproof")){
+                options.hexproof = linha;
             }
         });
         let dados = {
@@ -126,7 +129,36 @@ module.exports = {
             tier: tier,
             quality: quality,
             options : {
-                reflect: options.reflect
+                reflect: options.reflect,
+                inhabited: options.inhabited,
+                monsterVariety: options.monsterVariety,
+                twoUniqueBoss: options.twoUniqueBoss,
+                chain: options.chain,
+                beyond: options.beyond,
+                addProjectiles: options.addProjectiles,
+                slowTaunt: options.slowTaunt,
+                alwaysIgnite: options.alwaysIgnite,
+                manyTotems: options.manyTotems,
+                Nemesis: options.Nemesis,
+                cannotStunLife: options.cannotStunLife,
+                physReduction: options.physReduction,
+                monsterLife: options.monsterLife,
+                monsterDamage: options.monsterDamage,
+                damageFire: options.damageFire,
+                damageCold: options.damageCold,
+                damageLightning: options.damageLightning,
+                monsterMovementSpeed: options.monsterMovementSpeed,
+                monsterAttackSpeed: options.monsterAttackSpeed,
+                monsterCastSpeed: options.monsterCastSpeed,
+                uniqueDamage: options.uniqueDamage,
+                uniqueSpeed: options.uniqueSpeed,
+                uniqueLife: options.uniqueLife,
+                uniqueArea: options.uniqueArea,
+                lessCurse: options.lessCurse,
+                chaosResistence: options.chaosResistence,
+                elementalResistence: options.elementalResistence,
+                avoidPoisonBlindBleed: options.avoidPoisonBlindBleed,
+                hexproof: options.hexproof
             }
         }
 

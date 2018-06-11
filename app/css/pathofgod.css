@@ -1,0 +1,11 @@
+/* https://www.w3schools.com/css/css3_flexbox.asp */
+.container{
+    margin: 10px 10px 10px 10px;
+}
+.container-row{
+    display: flex;
+    flex-direction: row;
+}
+.flex-center{
+    justify-content: center;
+}

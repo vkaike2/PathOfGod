@@ -1,0 +1,12 @@
+body{
+    background-color: #adbfd6;
+}
+.texto-titulo{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#titulo{
+    font-size: 45px;
+}
+#subtitulo{
+    font-size: 15px;
+}
