@@ -6,6 +6,18 @@
     display: flex;
     flex-direction: row;
 }
-.flex-center{
+.flex-justify-center{
     justify-content: center;
+}
+
+.flex-align-center{
+    align-items: center;
+}
+
+.flex-justify-pace-betweens{
+    justify-content: space-between;
+}
+
+.flex-basis{
+    flex-basis: 50px;
 }
