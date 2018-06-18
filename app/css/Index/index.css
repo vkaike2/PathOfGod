@@ -1,10 +1,16 @@
+#menu{
+    background-color: #686868;
+}
+.item-menu{
+    background-color: whitesmoke;
+}
+
 #titulo{
     font-size: 45px;
 }
 #subtitulo{
     font-size: 15px;
 }
-
 .container-index{
     margin: 100px 100px 100px 100px;
 }

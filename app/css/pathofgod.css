@@ -1,6 +1,14 @@
 /* https://www.w3schools.com/css/css3_flexbox.asp */
+::-webkit-scrollbar {
+    display: none !important;
+}
 .container{
     margin: 10px 10px 10px 10px;
+}
+.container-menu{
+    margin: 5px 1px 5px 1px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 2px;
 }
 .container-row{
     display: flex;
@@ -9,15 +17,15 @@
 .flex-justify-center{
     justify-content: center;
 }
-
 .flex-align-center{
     align-items: center;
 }
-
 .flex-justify-pace-betweens{
     justify-content: space-between;
 }
-
 .flex-basis{
     flex-basis: 50px;
+}
+.button-size-1{
+    width: 120px;
 }

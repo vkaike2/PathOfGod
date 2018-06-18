@@ -9,6 +9,7 @@ app.on('ready', () => {
     let mainWindow = new BrowserWindow({
         width: 600,
         height: 800
+        // frame: false
     });
     // mainWindow.setMenu(null);
     mainWindow.loadURL(`file://${__dirname}/app/index.html`);
