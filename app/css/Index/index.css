@@ -4,7 +4,11 @@
 .item-menu{
     background-color: whitesmoke;
 }
-
+.item-menu:hover{
+    background-color:#141516;
+    color: whitesmoke;
+    cursor: pointer;
+}
 #titulo{
     font-size: 45px;
 }

@@ -1,4 +1,4 @@
-const { app, BrowserWindow} = require('electron');
+const { app, BrowserWindow, ipcMain} = require('electron');
 const data = require('./modulos/json/data');
 const inputMap = require('./modulos/input/map/inputMap');
 
@@ -16,3 +16,6 @@ app.on('ready', () => {
 });
 
 inputMap.esperaLeitura(numTeclado,data);
+inputMap.consultaView();
+
+
