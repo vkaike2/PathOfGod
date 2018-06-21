@@ -1,5 +1,4 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
-const path = require('path');
 const inputMap = require('../map/inputMap');
 
 module.exports = {
@@ -14,7 +13,6 @@ module.exports = {
                 // frame: false
             });
             // mainWindow.setMenu(null);
-
             this.mainWindow.loadURL(caminhoView + `index.html`);
             this.buscaRequisicao();
         });
