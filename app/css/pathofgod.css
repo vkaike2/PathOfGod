@@ -1,31 +1,99 @@
 /* https://www.w3schools.com/css/css3_flexbox.asp */
+
+body {
+    background-color: whitesmoke;
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #353535;
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #252525;
+    background-color: whitesmoke;
+    border: 2px solid #707070;
+    border-radius: 8px;
+    padding: 8px;
+    text-align: center;
+}
+
+.button-basic-active {
+    background-color: rgb(228, 228, 228);
+    border: 2px solid #494949;
+}
+
+.button-size-1 {
+    width: 120px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
 ::-webkit-scrollbar {
     display: none !important;
 }
-.container{
+
+.container {
     margin: 10px 10px 10px 10px;
 }
-.container-menu{
+
+.container-menu {
     margin: 5px 1px 5px 1px;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 7px 5px 7px;
     border-radius: 2px;
 }
-.container-row{
+
+.item-menu:hover {
+    background-color: #141516;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.container-row {
     display: flex;
     flex-direction: row;
 }
-.flex-justify-center{
+
+.container-conteudo {
+    margin: 15% 15% 15% 15%;
+}
+.container-conteudo-item{
+    margin: 10% 5% 10% 5%;
+}
+.flex-justify-center {
     justify-content: center;
 }
-.flex-align-center{
+
+.flex-align-center {
     align-items: center;
 }
-.flex-justify-pace-betweens{
+
+.flex-justify-pace-betweens {
     justify-content: space-between;
 }
-.flex-basis{
+
+.flex-basis {
     flex-basis: 50px;
 }
-.button-size-1{
-    width: 120px;
+
+#menu {
+    background-color: #686868;
+}
+
+.item-menu {
+    background-color: whitesmoke;
+}
+
+#titulo {
+    font-size: 45px;
+}
+
+#subtitulo {
+    font-size: 15px;
+}
+
+.titulo-item{
+    font-size: 25px;
 }

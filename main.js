@@ -1,21 +1,13 @@
-const { app, BrowserWindow, ipcMain} = require('electron');
+// const { app, BrowserWindow, ipcMain} = require('electron');
 const data = require('./modulos/json/data');
 const inputMap = require('./modulos/input/map/inputMap');
+const controlaTelas = require('./modulos/input/view/controlaTelas');
+
 
 let numTeclado = 0;
+inputMap.mapHelper = false;
 
-app.on('ready', () => {
-    console.log("Aplicacao iniciada");
-    let mainWindow = new BrowserWindow({
-        width: 600,
-        height: 800
-        // frame: false
-    });
-    // mainWindow.setMenu(null);
-    mainWindow.loadURL(`file://${__dirname}/app/index.html`);
-});
+controlaTelas.iniciaMainWindow();
 
-inputMap.esperaLeitura(numTeclado,data);
-inputMap.consultaView();
-
+inputMap.esperaLeitura(numTeclado, data);
 

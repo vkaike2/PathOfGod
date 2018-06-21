@@ -1,29 +1,40 @@
-const { ipcRenderer, shell} = require('electron');
+let lblReciper = "Off";
+function indexVariaveis() {
+    let lblMap = $('[id="map-label"]');
+    let lblRec = $('[id="recipe-label"]');
+    ipcRenderer.send('lbl-Index-req');
+    ipcRenderer.on('lbl-Index-Res', (event, mapa) => {
+        if (mapa) {
+            lblMap.text('On');
+        } else {
+            lblMap.text('Off');
+        }
+        lblRec.text('Off');
+    })
+}
 
-window.onload = function(){
+window.onload = function () {
     ipcRenderer.send('requisicao-teste');
-   
 };
 
-ipcRenderer.on('item-copiado',(envent) => {
+ipcRenderer.on('item-copiado', (envent) => {
     ipcRenderer.send('mostrar-item');
 });
 
-$(document).ready(function() {
-    $('[id="btnMap"]').click(function(){
+$(document).ready(function () {
+    indexVariaveis();
+
+    $('[id="btnMap"]').click(function () {
         let btnMap = $('[id="btnMap"]');
         let lblMap = $('[id="map-label"]');
 
-        if(btnMap.hasClass('is-outlined')){
-            btnMap.removeClass('is-outlined');
-            btnMap.addClass('is-active')
+        if (!btnMap.hasClass('button-basic-active')) {
             ipcRenderer.send('ativar-map');
             lblMap.text('On');
-        }else if('is-active'){
-            btnMap.removeClass('is-active');
-            btnMap.addClass('is-outlined')
+        } else {
             ipcRenderer.send('desativar-map');
             lblMap.text('Off');
         }
+        btnMap.toggleClass('button-basic-active');
     });
 });

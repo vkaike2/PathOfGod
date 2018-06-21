@@ -5,13 +5,13 @@ const { app,
     clipboard, 
     shell} = require('electron');
 
-// var mapHelper = false;
 
 module.exports = {
+    mapHelper:false,
     esperaLeitura(numTeclado,data){
         app.on('ready', () => {
-            if(this.mapHelper){
-                globalShortcut.register('F', () => {
+            globalShortcut.register('F', () => {
+                if(this.mapHelper){
                         // if(numTeclado == 0){
                         //     shell.openItem('teclado.ahk');
                         //     numTeclado++
@@ -30,7 +30,7 @@ module.exports = {
                                         +"Alleyways Map"+"\r\n"
                                         +"--------"+"\r\n"
                                         +"Map Tier: 2"+"\r\n"
-                                        +"Item Quantity: +63% (augmented)"+"\r\n"
+                                        +"Item Quantity: +65% (augmented)"+"\r\n"
                                         +"Item Rarity: +32% (augmented)"+"\r\n"
                                         +"Monster Pack Size: +21% (augmented)"+"\r\n"
                                         +"Quality: +8% (augmented)"+"\r\n"
@@ -48,27 +48,27 @@ module.exports = {
                         itemWindow = new BrowserWindow({
                             width: 300,
                             height: 300,
-                            alwaysOnTop : true
-                            // transparent: true,
-                            // frame: false
+                            alwaysOnTop : true,
+                            frame: false
                         });
-                        console.log(__dirname);
                         itemWindow.loadURL(`file://${__dirname}/../../../app/item.html`);
                 
-                        // setTimeout(() => {itemWindow.close();}, 1000);
+                        setTimeout(() => {itemWindow.close();}, 1000);
                     }, 200);
-                });
-            }
+                }
+            });
         });
     },
-    consultaView(){
+    consultaView(mainWindow){
         ipcMain.on('ativar-map', (event) =>{
-            console.log(this.mapHelper);
             this.mapHelper = true;
         });
         ipcMain.on('desativar-map', (event) =>{
-            console.log(this.mapHelper);
             this.mapHelper = false;
         });
-    },mapHelper:false
+
+        ipcMain.on('lbl-Index-req',()=>{
+            mainWindow.send('lbl-Index-Res',this.mapHelper);
+        });
+    }
 }

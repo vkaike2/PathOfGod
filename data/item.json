@@ -1,7 +1,11 @@
 {
+  "tipoItem": "Mapa",
   "nomeBase": "Alleyways Map",
   "nome": "Twisted Haven",
   "tier": "2",
+  "packSize": "+65% ",
+  "rarity": "+65% ",
+  "quantity": "",
   "quality": "+8% ",
   "options": {
     "reflect": "Monsters reflect 13% of Elemental Damage",
