@@ -7,15 +7,17 @@ SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
 send, ^c
 
-f::
-SendInput {alt down}
-; Sleep 50
-SendInput {Numpad1}
-; Sleep 50
-SendInput {Numpad0}
-; Sleep 50
-SendInput {Numpad2}
-; Sleep 50
-SendInput {alt up}
-; ExitApp
+; f::
+; SendInput {alt down}
+; ; Sleep 50
+; SendInput {Numpad1}
+; ; Sleep 50
+; SendInput {Numpad0}
+; ; Sleep 50
+; SendInput {Numpad2}
+; ; Sleep 50
+; SendInput {alt up}
+; ; ExitApp
 
+
+ExitApp

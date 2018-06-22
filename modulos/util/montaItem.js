@@ -47,93 +47,125 @@ module.exports = {
         let linhasBlocoB = blocoItem[1].split("\r\n"); // tier/quantityI/rarityI/pack size/quality
         let linhasBlocoC = blocoItem[2].split("\r\n"); // item level
         let linhasBlocoD = blocoItem[3].split("\r\n"); // info
-
-        if (linhasBlocoA[2] != "--------") {
+     
+        if (!linhasBlocoA[2].includes("")) {
             nome = linhasBlocoA[1];
-            nomeBase = linhasBlocoA[2];
+            nomeBase = linhasBlocoA[2].replace("Superior ","");
         } else {
-            nomeBase = linhasBlocoA[1];
+            nomeBase = linhasBlocoA[1].replace("Superior ","");
         }
 
         linhasBlocoB.forEach(linha => {
             if (linha.includes("Quality")) {
-                quality = linha.split(": ")[1];
+                quality = linha.split(": +")[1];
                 quality = quality.split("(")[0];
             } else if (linha.includes("Tier")) {
                 tier = linha.split(": ")[1];
             } else if (linha.includes("Pack Size")) {
-                packSize = linha.split(": ")[1];
-                packSize = quality.split("(")[0];
+                packSize = linha.split(": +")[1];
+                packSize = packSize.split("(")[0];
             } else if (linha.includes("Item Rarity")) {
-                rarity = linha.split(": ")[1];
-                rarity = quality.split("(")[0];
+                rarity = linha.split(": +")[1];
+                rarity = rarity.split("(")[0];
             } else if (linha.includes("Item Quantity")) {
-                quality = linha.split(": ")[1];
-                quality = quality.split("(")[0];
+                quantity = linha.split(": +")[1];
+                quantity = quantity.split("(")[0];
             }
         });
 
         linhasBlocoD.forEach(linha => {
             if (linha.includes("reflect")) {
-                options.reflect = linha;
+                if(linha.includes("Elemental")){
+                    options.reflect = "Ele Reflect";
+                }else{
+                    options.reflect = "Phy Reflect";
+                }
             } else if (linha.includes("inhabited")) {
-                options.inhabited = linha;
+                if(linha.includes("Rougue Exiles")){
+                    options.inhabited = "Rougue Exiles";
+                }else if(linha.includes("Skeletons")){
+                    options.inhabited = "Skeletons";
+                }else if(linha.includes("Goatmen")){
+                    options.inhabited = "Goatmen";
+                }else if(linha.includes("Sea Witches")){
+                    options.inhabited = "Sea Witche";
+                }else if(linha.includes("Undead")){
+                    options.inhabited = "Undead";
+                }else if(linha.includes("ranged")){
+                    options.inhabited = "Ranged";
+                }else if(linha.includes("Animals")){
+                    options.inhabited = "Animals";
+                }else if(linha.includes("Demons")){
+                    options.inhabited = "Demons";
+                }else if(linha.includes("Humanoids")){
+                    options.inhabited = "Humanoids";
+                }else if(linha.includes("Solaris")){
+                    options.inhabited = "Solaris";
+                }else if(linha.includes("Lunaris")){
+                    options.inhabited = "Lunaris";
+                }else if(linha.includes("Ghosts")){
+                    options.inhabited = "Ghosts";
+                }else if(linha.includes("Kitava")){
+                    options.inhabited = "Kitava";
+                }else if(linha.includes("Abominations")){
+                    options.inhabited = "Abominations";
+                }
             } else if (linha.includes("monster variety")) {
-                options.monsterVariety = linha;
+                options.monsterVariety = "Variety";
             } else if (linha.includes("two Unique")) {
-                options.twoUniqueBoss = linha;
+                options.twoUniqueBoss = "2 Boss";
             } else if (linha.includes("Chain")) {
-                options.chain = linha;
+                options.chain = "Chain";
             } else if (linha.includes("Beyond")) {
-                options.beyond = linha;
+                options.beyond = "Beyond";
             } else if (linha.includes("additional Projectiles")) {
-                options.addProjectiles = linha;
+                options.addProjectiles = "Add Proj";
             } else if (linha.includes("slowed below base speed")) {
-                options.slowTaunt = linha;
+                options.slowTaunt = "Slow Taunt";
             } else if (linha.includes("always Ignites")) {
-                options.alwaysIgnite = linha;
+                options.alwaysIgnite = "Alw Ignite";
             } else if (linha.includes("Totems")) {
-                options.manyTotems = linha;
+                options.manyTotems = "Totem";
             } else if (linha.includes("Nemesis Mod")) {
-                options.Nemesis = linha;
+                options.Nemesis = "Nemesis";
             } else if (linha.includes("cannot be Stunned")) {
-                options.cannotStunLife = linha;
+                options.cannotStunLife = "Can't Stun";
             } else if (linha.includes("Physical Damage Reduction")) {
-                options.physReduction = linha;
+                options.physReduction = "Phys Reduction";
             } else if (linha.includes("more Monster Life")) {
-                options.monsterLife = linha;
+                options.monsterLife = "Monster Life";
             } else if (linha.includes("increased Monster Damage")) {
-                options.monsterDamage = linha;
+                options.monsterDamage = "Monster Dmg";
             } else if (linha.includes("extra Damage as Fire")) {
-                options.damageFire = linha;
+                options.damageFire = "Fire Dmg";
             } else if (linha.includes("extra Damage as Cold")) {
-                options.damageCold
+                options.damageCold = "Cold Dmg";
             } else if (linha.includes("extra Damage as Lightning")) {
-                options.damageLightning = linha;
+                options.damageLightning = "Light Dmg";
             } else if (linha.includes("Movement Speed")) {
-                options.monsterMovementSpeed = linha;
+                options.monsterMovementSpeed = "Monster Mov Spd";
             } else if (linha.includes("Attack Speed")) {
-                options.monsterAttackSpeed = linha;
+                options.monsterAttackSpeed = "Atk Spd";
             } else if (linha.includes("Cast Speed")) {
-                options.monsterCastSpeed = linha;
+                options.monsterCastSpeed = "Cast Spd";
             } else if (linha.includes("Boss deals")) {
-                options.uniqueDamage = linha;
+                options.uniqueDamage = "Boss Dmg";
             } else if (linha.includes(("Boss has")) && linha.includes("increased")) {
-                options.uniqueSpeed = linha;
+                options.uniqueSpeed = "Boss Spd";
             } else if (linha.includes("Boss has") && linha.includes("increased Life")) {
-                options.uniqueLife = linha;
+                options.uniqueLife = "Boss Life";
             } else if (linha.includes("Boss has") && linha.includes("Area of Effect")) {
-                options.uniqueArea = linha;
+                options.uniqueArea = "Boss Area";
             } else if (linha.includes("less effect of Curses")) {
-                options.lessCurse = linha;
+                options.lessCurse = "Less Curse Effect";
             } else if (linha.includes("Chaos Resistence")) {
-                options.chaosResistence = linha;
+                options.chaosResistence = "Chaos Res";
             } else if (linha.includes("Elemental Resistence")) {
-                options.elementalResistence = linha;
+                options.elementalResistence = "Ele Res";
             } else if (linha.includes("to avoid Poison")) {
-                options.avoidPoisonBlindBleed = linha;
+                options.avoidPoisonBlindBleed = "Avoid";
             } else if (linha.includes("Hexproof")) {
-                options.hexproof = linha;
+                options.hexproof = "Hexproof";
             }
         });
         let dados = {

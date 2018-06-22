@@ -13,12 +13,11 @@ function indexVariaveis() {
     })
 }
 
-window.onload = function () {
-    ipcRenderer.send('requisicao-teste');
-};
-
-ipcRenderer.on('item-copiado', (envent) => {
+ipcRenderer.on('item-copiado', (evt) => {
     ipcRenderer.send('mostrar-item');
+});
+ipcRenderer.on('toggle-map-helper',(evt)=>{
+    $('[id="btnMap"]').trigger("click");
 });
 
 $(document).ready(function () {

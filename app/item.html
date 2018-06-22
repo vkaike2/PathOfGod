@@ -8,24 +8,50 @@
     <link rel="stylesheet" type="text/css" href="./css/item/item.css">
 </head>
 
-<body>
+<body class="item-body">
     <Section>
         <div class="container">
             <div class="container-row flex-justify-center">
-                <img src="./../image/map/Academy.png" alt="" id="imagem-item">
+                <!-- <img src="" alt="" id="imagem-item"> -->
                 <span class="titulo-item" id="nomeItem">MAPA Teste</span>
             </div>
             <div class="container-row flex-justify-center">
-                <span class="subtitulo-item">Tier: 5</span>
+                <span class="subtitulo-item item-info">
+                    <span class="good-mod">
+                        Quality: 
+                        <span id="quality">
+                        </span>
+                    </span>
+                </span>
             </div>
-            <div class="container-conteudo-item">
-                <div class="contaienr-wrap" id="conteudo-item-dialog">
-                    <div class="div-mod">
+            <div class="container-row flex-justify-center">
+                <div id="pack-size-div">
+                    <span class="good-mod">P.S.:
+                        <span class="good-mod" id="packSize">
+                        </span>
+                    </span>
+                </div>
+                <div id="rarity-div">
+                    <span class="good-mod">Ra.:
+                        <span class="good-mod" id="rarity">
+                        </span>
+                    </span>
+                </div>
+                <div id="quantity-div">
+                    <span class="good-mod">Qt.:
+                        <span class="good-mod" id="quantity">
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="container-conteudo-item flex-center" id="conteudo-item-dialog">
+                <!-- <div class="container-wrap flex-center" id="conteudo-item-dialog"> -->
+                    <!-- <div class="div-mod">
                         <span class="texto-mod">
                             MOD
                         </span>
-                    </div>
-                </div>
+                    </div> -->
+                <!-- </div> -->
             </div>
         </div>
     </Section>
