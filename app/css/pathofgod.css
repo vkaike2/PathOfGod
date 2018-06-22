@@ -1,11 +1,11 @@
 /* https://www.w3schools.com/css/css3_flexbox.asp */
-/* html, body, Section {
+html, body, Section {
     height:100%;
-} */
-.item-body{
-    height: 300px;
-    width: 300px;
 }
+/* Section{
+    background-color: blue;
+} */
+
 body {
     background-color: whitesmoke;
     font: 16px Arial, Helvetica, sans-serif;
@@ -43,6 +43,7 @@ body {
 
 .container {
     margin: 10px 10px 10px 10px;
+    /* background-color: rebeccapurple; */
 }
 
 .container-menu {
@@ -69,7 +70,7 @@ body {
     margin: 15% 15% 15% 15%;
 }
 .container-conteudo-item{
-    margin: 10% 5% 0 5%;
+    margin: 3% 5% 0 5%;
 }
 
 .flex-justify-center {
@@ -80,6 +81,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* flex-direction:column; */
 }
 
 .flex-align-center {
@@ -102,17 +104,20 @@ body {
     background-color: whitesmoke;
 }
 
-#titulo {
+.titulo {
     font-size: 45px;
 }
 
-#subtitulo {
+.subtitulo {
     font-size: 15px;
 }
-.subtitulo-item{
-    font-size: 15px;
-}
+
 .titulo-item{
+    height: 55px;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
+    display: flex;
+    justify-content:center;
+    align-content:center;
+    flex-direction:column;
 }

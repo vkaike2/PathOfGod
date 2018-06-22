@@ -2,10 +2,12 @@ let lblReciper = "Off";
 function indexVariaveis() {
     let lblMap = $('[id="map-label"]');
     let lblRec = $('[id="recipe-label"]');
+    let btnMap = $('[id="btnMap"]');
     ipcRenderer.send('lbl-Index-req');
     ipcRenderer.on('lbl-Index-Res', (event, mapa) => {
         if (mapa) {
             lblMap.text('On');
+            btnMap.addClass('button-basic-active');
         } else {
             lblMap.text('Off');
         }

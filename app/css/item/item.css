@@ -1,31 +1,16 @@
-#imagem-item {
+.item-body{
+    height: 300px;
+    width: 300px;  
+}
+
+/* #imagem-item {
     width: 30px;
     height: 30px;
     margin-right: 5px;
-}
+} */
 .good-mod{
     font-size: 15px;
     color: whitesmoke;
-}
-#pack-size-div {
-    background-color: #001d4c;
-    padding: 2px 4px 2px 4px;
-    margin: 0 3px 0 3px;
-    border-radius: 5px;
-}
-
-#rarity-div {
-    background-color: #60611e;
-    padding: 2px 4px 2px 4px;
-    margin: 0 3px 0 3px;
-    border-radius: 5px;
-}
-
-#quantity-div {
-    background-color: #222b38;
-    padding: 2px 4px 2px 4px;
-    margin: 0 3px 0 3px;
-    border-radius: 5px;
 }
 
 .div-mod {
@@ -40,12 +25,19 @@
     color: #316627;
 }
 .item-info{
-    background-color: #222b38;
-    padding: 2px 4px 2px 4px;
+    background-color: #4e4e4e;
+    padding: 3px 4px 3px 4px;
     margin: 3px 3px 3px 3px;
-    border-radius: 5px;
+    border-radius: 2px;
 }
 
 .texto-mod {
     color: whitesmoke;
+}
+
+.tamanho-item-container{
+    width: 280px;
+}
+.tamanho-item{
+    height: 170px;
 }

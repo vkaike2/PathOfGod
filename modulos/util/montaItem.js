@@ -48,11 +48,11 @@ module.exports = {
         let linhasBlocoC = blocoItem[2].split("\r\n"); // item level
         let linhasBlocoD = blocoItem[3].split("\r\n"); // info
      
-        if (!linhasBlocoA[2].includes("")) {
+        if (!linhasBlocoA[2] == "") {
             nome = linhasBlocoA[1];
-            nomeBase = linhasBlocoA[2].replace("Superior ","");
+            nomeBase = linhasBlocoA[2].replace("Superior ","").replace("Map","");
         } else {
-            nomeBase = linhasBlocoA[1].replace("Superior ","");
+            nomeBase = linhasBlocoA[1].replace("Superior ","").replace("Map","");
         }
 
         linhasBlocoB.forEach(linha => {

@@ -8,22 +8,21 @@ const data = require('../../json/data');
 
 module.exports = {
     mapHelper:false,
-    teste:null,
     numTeclado:0,
     esperaLeitura(){
         globalShortcut.register('F', () => {
-                if(this.numTeclado == 0){
-                    shell.openItem('teclado.ahk');
-                    this.numTeclado++
-                }else if(this.numTeclado == 1){
-                    shell.openItem('teclado1.ahk');
-                    this.numTeclado++;
-                }else{
-                    shell.openItem('teclado2.ahk');
-                    this.numTeclado = 0;
-                }
+                // if(this.numTeclado == 0){
+                //     shell.openItem('teclado.ahk');
+                //     this.numTeclado++
+                // }else if(this.numTeclado == 1){
+                //     shell.openItem('teclado1.ahk');
+                //     this.numTeclado++;
+                // }else{
+                //     shell.openItem('teclado2.ahk');
+                //     this.numTeclado = 0;
+                // }
             setTimeout(() => {
-                data.salvaDados(clipboard.readText('selection'));
+                // data.salvaDados(clipboard.readText('selection'));
                 // data.salvaDados("Rarity: Rare"+"\r\n"
                 //                 +"Twisted Haven"+"\r\n"
                 //                 +"Alleyways Map"+"\r\n"
@@ -42,18 +41,22 @@ module.exports = {
                 //                 +"Unique Boss has 20% increased Attack and Cast Speed"+"\r\n"
                 //                 +"Players have 20% less Recovery Rate of Life and Energy Shield"+"\r\n"
                 //                 +"--------"+"\r\n"
-                //                 +"Travel to this Map by using it in the Templar Laboratory or a personal Map Device. Maps can only be used once.")
+                //                 +"Travel to this Map by using it in the Templar Laboratory or a personal Map Device. Maps can only be used once.");
                 let itemWindow = null;
-                itemWindow = new BrowserWindow({
-                    width: 300,
-                    height: 300,
-                    alwaysOnTop : true
-                    // frame: false
-                });
-                // itemWindow.setMenu(null);
-                itemWindow.loadURL(`file://${__dirname}/../../../app/item.html`);
+                // if(itemWindow == null){
+                    itemWindow = new BrowserWindow({
+                        width: 300,
+                        height: 300,
+                        alwaysOnTop : true,
+                        frame: false
+                    });
+                    // itemWindow.setMenu(null);
+                    itemWindow.loadURL(`file://${__dirname}/../../../app/item.html`);
+                    setTimeout(() => {itemWindow.close();}, 1000);
+                // }else{
+                    // console.log('teste');
+                // }
         
-                // setTimeout(() => {itemWindow.close();}, 1000);
             }, 200);
         });
     },
