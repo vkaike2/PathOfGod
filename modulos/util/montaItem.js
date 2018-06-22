@@ -158,11 +158,11 @@ module.exports = {
                 options.uniqueArea = "Boss Area";
             } else if (linha.includes("less effect of Curses")) {
                 options.lessCurse = "Less Curse Effect";
-            } else if (linha.includes("Chaos Resistence")) {
+            } else if (linha.includes("Chaos Res")) {
                 options.chaosResistence = "Chaos Res";
-            } else if (linha.includes("Elemental Resistence")) {
+            } else if (linha.includes("Elemental Res")) {
                 options.elementalResistence = "Ele Res";
-            } else if (linha.includes("to avoid Poison")) {
+            } else if (linha.includes("avoid Poison")) {
                 options.avoidPoisonBlindBleed = "Avoid";
             } else if (linha.includes("Hexproof")) {
                 options.hexproof = "Hexproof";

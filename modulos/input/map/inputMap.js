@@ -47,13 +47,13 @@ module.exports = {
                 itemWindow = new BrowserWindow({
                     width: 300,
                     height: 300,
-                    alwaysOnTop : true,
-                    frame: false
+                    alwaysOnTop : true
+                    // frame: false
                 });
-                itemWindow.setMenu(null);
+                // itemWindow.setMenu(null);
                 itemWindow.loadURL(`file://${__dirname}/../../../app/item.html`);
         
-                setTimeout(() => {itemWindow.close();}, 1000);
+                // setTimeout(() => {itemWindow.close();}, 1000);
             }, 200);
         });
     },

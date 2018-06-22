@@ -91,7 +91,13 @@ $(document).ready(function () {
         // let nomeImagem = data.nomeBase.replace("Map","").trim();
         // $('#imagem-item').attr("src",pastaImagem+nomeImagem+".png")
         $('#nomeItem').text(data.nomeBase.trim());
-        $('#quality').text(data.quality);
+        // $('#quality').text(data.quality);
+
+        if (data.quality.trim() != "") {
+            $('#quality').text(data.quality.trim());
+        } else {
+            $('#quality').text("0%");
+        }
         if (data.packSize.trim() != "") {
             $('#packSize').text(data.packSize.trim());
         } else {
