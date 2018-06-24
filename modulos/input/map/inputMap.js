@@ -1,28 +1,30 @@
-const { app, 
-    BrowserWindow, 
-    ipcMain, 
-    globalShortcut, 
-    clipboard, 
-    shell} = require('electron');
+const { app,
+    BrowserWindow,
+    ipcMain,
+    globalShortcut,
+    clipboard,
+    shell } = require('electron');
 const data = require('../../json/data');
 
 module.exports = {
-    mapHelper:false,
-    numTeclado:0,
-    esperaLeitura(){
+    mapHelper: false,
+    numTeclado: 0,
+    itemWinIsClosed: true,
+    timeout: 1000,
+    esperaLeitura() {
         globalShortcut.register('F', () => {
-                // if(this.numTeclado == 0){
-                //     shell.openItem('teclado.ahk');
-                //     this.numTeclado++
-                // }else if(this.numTeclado == 1){
-                //     shell.openItem('teclado1.ahk');
-                //     this.numTeclado++;
-                // }else{
-                //     shell.openItem('teclado2.ahk');
-                //     this.numTeclado = 0;
-                // }
+            if (this.numTeclado == 0) {
+                shell.openItem('teclado.ahk');
+                this.numTeclado++
+            } else if (this.numTeclado == 1) {
+                shell.openItem('teclado1.ahk');
+                this.numTeclado++;
+            } else {
+                shell.openItem('teclado2.ahk');
+                this.numTeclado = 0;
+            }
             setTimeout(() => {
-                // data.salvaDados(clipboard.readText('selection'));
+                data.salvaDados(clipboard.readText('selection'));
                 // data.salvaDados("Rarity: Rare"+"\r\n"
                 //                 +"Twisted Haven"+"\r\n"
                 //                 +"Alleyways Map"+"\r\n"
@@ -43,40 +45,57 @@ module.exports = {
                 //                 +"--------"+"\r\n"
                 //                 +"Travel to this Map by using it in the Templar Laboratory or a personal Map Device. Maps can only be used once.");
                 let itemWindow = null;
-                // if(itemWindow == null){
+                if (this.itemWinIsClosed) {
                     itemWindow = new BrowserWindow({
                         width: 300,
                         height: 300,
-                        alwaysOnTop : true,
+                        alwaysOnTop: true,
                         frame: false
                     });
-                    // itemWindow.setMenu(null);
                     itemWindow.loadURL(`file://${__dirname}/../../../app/item.html`);
-                    setTimeout(() => {itemWindow.close();}, 1000);
-                // }else{
-                    // console.log('teste');
-                // }
-        
+                    this.itemWinIsClosed = false;
+                    setTimeout(() => {
+                        itemWindow.close();
+                        setTimeout(() => {
+                            this.itemWinIsClosed = true;
+                        }, 200);
+                    }, this.timeout);
+                }
             }, 200);
         });
     },
-    consultaView(mainWindow){
-        ipcMain.on('ativar-map', (event) =>{
+    consultaView(mainWindow) {
+        ipcMain.on('ativar-map', (event) => {
             this.mapHelper = true;
-            this.esperaLeitura();
+            this.esperaLeitura(timeout);
         });
-        ipcMain.on('desativar-map', (event) =>{
+        ipcMain.on('desativar-map', (event) => {
             this.mapHelper = false;
             globalShortcut.unregister('F');
         });
-
-        ipcMain.on('lbl-Index-req',()=>{
-            mainWindow.send('lbl-Index-Res',this.mapHelper);
+        ipcMain.on('lbl-Index-req', () => {
+            mainWindow.send('lbl-Index-Res', this.mapHelper);
         });
         this.toggleMapHelper(mainWindow);
-    },toggleMapHelper(mainWindow){
+
+        ipcMain.on('atualiza-timeout',(event,timeout)=>{
+            this.atualizaTimeout(timeout);
+        });
+    }, toggleMapHelper(mainWindow) {
         globalShortcut.register('CmdOrCtrl+Alt+F', () => {
             mainWindow.send('toggle-map-helper');
         });
+    }, atualizaTimeout(timeout) {
+        if(timeout && this.timeout != timeout){
+            data.salvaTimeout(timeout*1000);
+        }
+        data.leTimeout()
+            .then(dados => {
+                if(dados.mapHelper >= 1000){
+                    this.timeout = dados.mapHelper;
+                }
+            }).catch((erro) => {
+                console.log(erro);//precisa tratar o erro
+            });
     }
 }

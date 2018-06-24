@@ -4,7 +4,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Path of God</title>
+
     <link rel="stylesheet" type="text/css" href="./css/pathofgod.css">
+    <link rel="stylesheet" type="text/css" href="./css/item/item.css">
+    <link rel="stylesheet" type="text/css" href="./css/map-helper/mapConfig.css">
 </head>
 
 <body>
@@ -19,22 +22,136 @@
     <section>
         <div class="container">
             <div class="container-row flex-justify-center">
-                <span id="titulo">Map Helper</span>
+                <span class="titulo">Map Helper</span>
             </div>
             <div class="container-row flex-justify-center">
-                <span id="subtitulo">(Tem Elron, serve?)</span>
+                <span class="subtitulo">(Tem Elron, serve?)</span>
             </div>
         </div>
 
-        <div class="container container-conteudo">
-            <!-- colocar a config aqui -->
+        <div class="container">
+            <div class="container-row">
+                <a id="how-to-link" class="link-tab-config tab-selecionada">How to</a>
+                <a id="config-link" class="link-tab-config">Config.</a>
+            </div>
+            <div class="container-row">
+                <div id="how-to-div" class="div-config">
+                    <div class="container-config">
+                        <div class="container-row">
+                            <span class="titulo-config">How to Use</span>
+                        </div>
+                    </div>
+                    <div class="container-conteudo-config">
+                        <div class="container-row">
+                            <span class="text-conteudo-titulo">
+                                What it supposed to do?
+                            </span>
+                        </div>
+                        <div class="container-row">
+                            <span class="text-conteudo-resposta">
+                                <p>The Map Helper is made for warning you about a map mod that you choose.
+                                    <br/> To use you need to activate the Map helper int the "HOME" and press "F" whit your cursor
+                                    above the Map.
+                                </p>
+                            </span>
+                        </div>
+                        <div class="container-row">
+                            <span class="text-conteudo-titulo">
+                                Shortcuts
+                            </span>
+                        </div>
+                        <div class="container-row">
+                            <span class="text-conteudo-resposta">
+                                <p>
+                                    CTRL + ALT + F = Toggle the Map Helper
+                                    <br /> F = Read Map
+                                </p>
+                            </span>
+                        </div>
+                        <div class="warning-div-config">
+                            <div class="container-row">
+                                <span class="text-conteudo-titulo">
+                                    WARNING!
+                                </span>
+                            </div>
+                            <div class="container-row">
+                                <span class="text-conteudo-resposta">
+                                    <p>
+                                        Your "F" key wouldn't work if you have the Map Helper active.
+                                        <br /> This sh*t happen because this Software capture the event of this key for make the
+                                        magic work.
+                                    </p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-row">
+                <div id="config-div" class="div-config div-config-oculta">
+                    <div class="container-config">
+                        <div class="container-row">
+                            <span class="titulo-config">Configuration</span>
+                        </div>
+
+                    </div>
+                    <div class="container-conteudo-config">
+                        <div class="container-row">
+                            <span class="text-conteudo-titulo">
+                                Timeout
+                            </span>
+                        </div>
+                        <div class="container-row">
+                            <span class="text-conteudo-resposta">
+                                <p>
+                                    <label for="map-helper-timeout">Seconds: </label>
+                                    <input type="text" class="input-config-numeric" id="map-helper-timeout" maxlength="2" />
+                                </p>
+                            </span>
+                        </div>
+                        <div class="container-row">
+                            <span class="text-conteudo-titulo">
+                                What do you want to show?
+                            </span>
+                        </div>
+                        <div class="container-row">
+                            <span class="text-conteudo-resposta">
+                                <p>
+                                    <div class="div-select container-row">
+                                        <input type="text" class="select" id="selectMap">
+                                        <div class="div-arrow">
+                                            <i class="arrow-down"></i>
+                                        </div>
+                                        <ul class="options options-map-mods div-options ocultar">
+                                            <!-- <li class="option">TESTasE</li> -->
+                                        </ul>
+                                    </div>
+                                </p>
+                            </span>
+                        </div>
+                        <div class="container-row">
+                            <div id="mods-adicionados" class="flex-center container-wrap"></div>
+                        </div>
+                        <div class="flex-end">
+                            <!-- <p> -->
+                                <a class="button-config " id="salvar-mapa-helper">Save</a>
+                            <!-- </p> -->
+                        </div>
+                    </div>
+                    <!-- <div class="container-conteudo-config"> -->
+                    <!-- </div> -->
+                </div>
+                <!-- <div id="how-to-div" class="div-config"></div> -->
+            </div>
         </div>
     </section>
 
     <script>
         window.$ = window.jQuery = require("jquery");
     </script>
+
     <script src="js/pathOfGod.js"></script>
+    <script src="js/mapConfig.js"></script>
 </body>
 
 </html>

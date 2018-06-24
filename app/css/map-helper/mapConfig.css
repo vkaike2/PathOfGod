@@ -1,0 +1,11 @@
+#mods-adicionados{
+    background-color: whitesmoke;
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+}
+#salvar-mapa-helper{
+    width: 100px;
+    padding: 5px 0 5px 0;
+    margin: 20px 0 10px 0;
+}

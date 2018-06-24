@@ -1,9 +1,9 @@
 /* https://www.w3schools.com/css/css3_flexbox.asp */
-html, body, Section {
+
+/* https://silviomoreto.github.io/bootstrap-select/options/ */
+
+/* html, body, Section {
     height:100%;
-}
-/* Section{
-    background-color: blue;
 } */
 
 body {
@@ -29,12 +29,37 @@ body {
     border: 2px solid #494949;
 }
 
+.button-config {
+    font: 15px Arial, Helvetica, sans-serif;
+    color: #252525;
+    background-color: whitesmoke;
+    border: 2px solid #424242;
+    border-radius: 8px;
+    padding: 3px;
+    text-align: center;
+}
+
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .button-size-1 {
     width: 120px;
 }
 
 .button:hover {
     cursor: pointer;
+}
+
+.button-config:hover {
+    cursor: pointer;
+}
+
+.button-config:active {
+    background-color: rgb(117, 117, 117);
+    border: 2px solid #161616;
+    color: whitesmoke;
 }
 
 ::-webkit-scrollbar {
@@ -57,10 +82,12 @@ body {
     color: whitesmoke;
     cursor: pointer;
 }
-.container-wrap{
+
+.container-wrap {
     display: flex;
     flex-wrap: wrap;
 }
+
 .container-row {
     display: flex;
     flex-direction: row;
@@ -69,7 +96,8 @@ body {
 .container-conteudo {
     margin: 15% 15% 15% 15%;
 }
-.container-conteudo-item{
+
+.container-conteudo-item {
     margin: 3% 5% 0 5%;
 }
 
@@ -77,7 +105,8 @@ body {
     display: flex;
     justify-content: center;
 }
-.flex-center{
+
+.flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,12 +141,211 @@ body {
     font-size: 15px;
 }
 
-.titulo-item{
+.titulo-item {
     height: 55px;
     text-align: center;
     font-size: 25px;
     display: flex;
-    justify-content:center;
-    align-content:center;
-    flex-direction:column;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
 }
+
+/* #757575 */
+
+.link-tab-config {
+    color: inherit;
+    /* blue colors for links too */
+    background-color: #757575;
+    color: rgb(201, 201, 201);
+    margin-right: 2px;
+    padding: 4px 8px 4px 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.link-tab-config:hover {
+    text-decoration: none;
+    /* no underline */
+    color: rgb(201, 201, 201);
+    cursor: pointer;
+}
+
+.tab-selecionada {
+    background-color: #5a5a5a;
+    color: rgb(224, 223, 223);
+}
+
+.div-config {
+    background-color: #5a5a5a;
+    width: 100%;
+    height: 579px;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.container-config {
+    margin: 20px 20px 0 20px;
+}
+
+.container-conteudo-config {
+    margin: 40px 30px 0 30px;
+    color: whitesmoke;
+}
+
+.titulo-config {
+    font-size: 30px;
+    color: whitesmoke;
+}
+
+.div-config-oculta {
+    display: none;
+}
+
+.text-conteudo-titulo {
+    font-size: 20px;
+}
+
+.text-conteudo-resposta {
+    font-size: 15px;
+}
+
+.warning-div-config {
+    position: absolute;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    bottom: 0%;
+}
+
+.azul {
+    background-color: #051328;
+}
+
+.vermelho {
+    background-color: #4f0a0b;
+}
+
+.verde {
+    background-color: #144408;
+}
+
+.marrom {
+    background-color: #512009;
+}
+
+.roxo {
+    background-color: #330947;
+}
+
+.unidade-medida {
+    align-self: auto;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.input-config-numeric {
+    width: 30px;
+    text-align: center;
+    /* border-style: none; */
+    border-radius: 2px;
+    height: 20px;
+    font-size: 20px;
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #252525;
+    margin: 0 0 5px 0;
+    padding: 0 5px 0 5px;
+}
+
+.div-select {
+    /* background-color: blue; */
+    width: 100%;
+    height: 24px;
+    display: flex;
+    align-content: center;
+}
+
+.div-arrow {
+    background-color: whitesmoke;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    border: 2px solid #6d6d6d;
+    border-radius: 5px;
+}
+.div-arrow:hover{
+    cursor: pointer;
+}
+.div-arrow:active, .arrow-down:active{
+    background-color: #747474;
+}
+
+.arrow-down {
+    border: solid #6d6d6d;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    height: 2px;
+    width: 1px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    position: relative;
+    right: -33.5%;
+    top:27%;
+
+}
+
+.select {
+    border-radius: 2px;
+    height: 20px;
+    font-size: 20px;
+    width: 467px;
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #252525;
+    margin: 0 0 5px 0;
+    padding: 0 5px 0 5px;
+}
+
+.div-options {
+    /* background-color: #144408; */
+    height: 253px;
+    /* display: flex; */
+    overflow-y: scroll;
+}
+
+.ocultar {
+    display: none;
+}
+
+.options {
+    list-style-type: none;
+    position: absolute;
+    color: #252525;
+    font: 16px Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    width: 586px;
+}
+
+.options-map-mods {
+    left: 0%;
+    bottom: 9%;
+}
+
+.option {
+    padding: 5px;
+    background-color: whitesmoke;
+    border-bottom: 1px solid #6d6d6d;
+    border-right: 1px solid #6d6d6d;
+    border-left: 1px solid #6d6d6d;
+}
+
+.option:hover {
+    background-color: #858585;
+    color: whitesmoke;
+}
+
+.ultima-option {
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+

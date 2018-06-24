@@ -12,12 +12,13 @@ module.exports = {
                 height: 800
                 // frame: false
             });
-            // mainWindow.setMenu(null);
+            // this.mainWindow.setMenu(null);
             this.mainWindow.loadURL(caminhoView + `index.html`);
             this.buscaRequisicao();
         });
     },
     buscaRequisicao() {
+        inputMap.atualizaTimeout();
         inputMap.consultaView(this.mainWindow);
     }
 }
