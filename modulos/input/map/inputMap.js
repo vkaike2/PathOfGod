@@ -81,11 +81,16 @@ module.exports = {
         ipcMain.on('atualiza-timeout',(event,timeout)=>{
             this.atualizaTimeout(timeout);
         });
-    }, toggleMapHelper(mainWindow) {
+
+        this.atualizaConfig();
+
+    }, 
+    toggleMapHelper(mainWindow) {
         globalShortcut.register('CmdOrCtrl+Alt+F', () => {
             mainWindow.send('toggle-map-helper');
         });
-    }, atualizaTimeout(timeout) {
+    }, 
+    atualizaTimeout(timeout) {
         if(timeout && this.timeout != timeout){
             data.salvaTimeout(timeout*1000);
         }
@@ -97,5 +102,10 @@ module.exports = {
             }).catch((erro) => {
                 console.log(erro);//precisa tratar o erro
             });
+    },
+    atualizaConfig(){
+        ipcMain.on('atualiza-mapHelper', (event,novaConfig)=>{
+            console.log(novaConfig);
+        });
     }
 }

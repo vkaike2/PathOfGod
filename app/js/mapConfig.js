@@ -91,10 +91,18 @@ $(document).ready(function () {
 
     let arrow = $('.div-arrow');
     arrow.click(function () {
-        selectMod.removeClass('ocultar');
-        $(".option").each(function (index) {
-            $(this).removeClass('ocultar');
-        });
+        if(!arrow.children().hasClass('arrow-up')){
+            selectMod.removeClass('ocultar');
+            $(".option").each(function (index) {
+                $(this).removeClass('ocultar');
+            });
+        }else {
+            selectMod.addClass('ocultar');
+            $(".option").each(function (index) {
+                $(this).addClass('ocultar');
+            });
+        }
+        arrow.children().toggleClass('arrow-up')
     });
 
     $('.option').click(function (event) {
@@ -119,10 +127,12 @@ $(document).ready(function () {
             $(this).addClass('ocultar');
         });
         selectMod.addClass('ocultar');
+        arrow.children().removeClass('arrow-up')
     });
 
     let salvar = $('#salvar-mapa-helper');
     salvar.click(function () {
+        selectMod.removeClass('ocultar');
         let mapTimeout = $('#map-helper-timeout');
         ipcRenderer.send('atualiza-timeout', mapTimeout.val());
         ipcRenderer.send('atualiza-mapHelper', saveMapHelper);

@@ -260,7 +260,7 @@ body {
 .div-select {
     /* background-color: blue; */
     width: 100%;
-    height: 24px;
+    height: 29px;
     display: flex;
     align-content: center;
 }
@@ -286,23 +286,26 @@ body {
     display: inline-block;
     padding: 3px;
     height: 2px;
-    width: 1px;
+    width: 2px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     position: relative;
     right: -33.5%;
-    top:27%;
+    top: 22%;
 
 }
-
+.arrow-up{
+    border-width: 2px 0 0 2px;
+    top: 38%;
+}
 .select {
     border-radius: 2px;
-    height: 20px;
+    height: 23px;
     font-size: 20px;
     width: 467px;
     font: 16px Arial, Helvetica, sans-serif;
     color: #252525;
-    margin: 0 0 5px 0;
+    margin: auto;
     padding: 0 5px 0 5px;
 }
 
@@ -319,16 +322,18 @@ body {
 
 .options {
     list-style-type: none;
-    position: absolute;
+    position: relative;
     color: #252525;
     font: 16px Arial, Helvetica, sans-serif;
     font-size: 15px;
-    width: 586px;
+    width: 481px;
+    /* background-color: aqua; */
+    right: 53.5%;
+    bottom: -50%;
 }
 
 .options-map-mods {
-    left: 0%;
-    bottom: 9%;
+    /* left: 100%; */
 }
 
 .option {
