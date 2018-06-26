@@ -46,5 +46,13 @@ module.exports = {
             .catch((err) => {
                 console.log(err);
             });
+    }, leMapHelperConfig() {
+        return jsonfile.readFile(__dirname + '/../../config/map-helper.json');
+    }, salvaMapHelperConfig(dados) {
+        return jsonfile.writeFile(__dirname + '/../../config/map-helper.json', dados, { spaces: 2 })
+            .catch((err) => {
+                console.log(err);
+            });
+        
     }
 };

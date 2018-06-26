@@ -4,7 +4,9 @@ const { app,
     globalShortcut,
     clipboard,
     shell } = require('electron');
+const path = require('path')
 const data = require('../../json/data');
+const fs = require('fs');
 
 module.exports = {
     mapHelper: false,
@@ -14,14 +16,23 @@ module.exports = {
     esperaLeitura() {
         globalShortcut.register('F', () => {
             if (this.numTeclado == 0) {
-                shell.openItem('teclado.ahk');
-                this.numTeclado++
+                let caminho = __dirname + '/../../../teclado.ahk';
+                // console.log(caminho);
+                let teste = shell.openItem(caminho);
+                // console.log(teste);
+                this.numTeclado++;
             } else if (this.numTeclado == 1) {
-                shell.openItem('teclado1.ahk');
+                let caminho = __dirname + '/../../../teclado1.ahk';
+                // console.log(caminho);
+                let teste = shell.openItem(caminho);
+                // console.log(teste);
                 this.numTeclado++;
             } else {
-                shell.openItem('teclado2.ahk');
-                this.numTeclado = 0;
+                let caminho = __dirname + '/../../../teclado2.ahk';
+                // console.log(caminho);
+                let teste = shell.openItem(caminho);
+                // console.log(teste);
+                this.numTeclado++;
             }
             setTimeout(() => {
                 data.salvaDados(clipboard.readText('selection'));
@@ -54,6 +65,7 @@ module.exports = {
                     });
                     itemWindow.loadURL(`file://${__dirname}/../../../app/item.html`);
                     this.itemWinIsClosed = false;
+
                     setTimeout(() => {
                         itemWindow.close();
                         setTimeout(() => {
@@ -67,7 +79,7 @@ module.exports = {
     consultaView(mainWindow) {
         ipcMain.on('ativar-map', (event) => {
             this.mapHelper = true;
-            this.esperaLeitura(timeout);
+            this.esperaLeitura();
         });
         ipcMain.on('desativar-map', (event) => {
             this.mapHelper = false;
@@ -78,34 +90,59 @@ module.exports = {
         });
         this.toggleMapHelper(mainWindow);
 
-        ipcMain.on('atualiza-timeout',(event,timeout)=>{
+        ipcMain.on('atualiza-timeout', (event, timeout) => {
             this.atualizaTimeout(timeout);
         });
 
-        this.atualizaConfig();
+        this.atualizaConfig(mainWindow);
 
-    }, 
+    },
     toggleMapHelper(mainWindow) {
         globalShortcut.register('CmdOrCtrl+Alt+F', () => {
             mainWindow.send('toggle-map-helper');
         });
-    }, 
+    },
     atualizaTimeout(timeout) {
-        if(timeout && this.timeout != timeout){
-            data.salvaTimeout(timeout*1000);
+        if (timeout && this.timeout != timeout) {
+            data.salvaTimeout(timeout * 1000);
         }
         data.leTimeout()
             .then(dados => {
-                if(dados.mapHelper >= 1000){
+                if (dados.mapHelper >= 1000) {
                     this.timeout = dados.mapHelper;
                 }
             }).catch((erro) => {
                 console.log(erro);//precisa tratar o erro
             });
     },
-    atualizaConfig(){
-        ipcMain.on('atualiza-mapHelper', (event,novaConfig)=>{
-            console.log(novaConfig);
+    atualizaConfig(mainWindow) {
+        ipcMain.on('atualiza-mapHelper', (event, novaConfig) => {
+
+            data.leMapHelperConfig().then(modsSalvos => {
+
+                let objectKeysArray = Object.keys(modsSalvos);
+                objectKeysArray.forEach(function (objKey) {
+                    modsSalvos[objKey].show = 'f';
+                });
+                novaConfig.forEach(function (novaC) {
+                    objectKeysArray.forEach(function (objKey) {
+                        if (novaC[2] == modsSalvos[objKey].search || modsSalvos[objKey].search == "UNDEFINED") {
+                            modsSalvos[objKey].color = novaC[1];
+                            modsSalvos[objKey].show = 't';
+                        }
+                    });
+                });
+
+                data.salvaMapHelperConfig(modsSalvos)
+                    .then(() => {
+                        console.log('salvo com sucesso');
+                        mainWindow.send('mapa-config-salvo-sucesso');
+                    });
+
+            }).catch((err) => {
+                console.log(err);
+            });
+
         });
     }
 }

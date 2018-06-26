@@ -12,13 +12,19 @@ module.exports = {
                 height: 800
                 // frame: false
             });
-            // this.mainWindow.setMenu(null);
+            this.mainWindow.setMenu(null);
             this.mainWindow.loadURL(caminhoView + `index.html`);
             this.buscaRequisicao();
+        });
+        app.on('window-all-closed',() => {
+            app.quit();
         });
     },
     buscaRequisicao() {
         inputMap.atualizaTimeout();
         inputMap.consultaView(this.mainWindow);
+        ipcMain.on('teste',()=>{
+            console.log('teste');
+        })
     }
 }

@@ -179,7 +179,7 @@ body {
 .div-config {
     background-color: #5a5a5a;
     width: 100%;
-    height: 579px;
+    min-height: 579px;
     border-bottom-left-radius: 4px;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;

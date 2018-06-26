@@ -1,3 +1,5 @@
+const { ipcRenderer } = require('electron');
+
 function criaDivMod(mod,cor) {
     let id = "id-" + mod.replace(" ", "-");
     $("<div/>", {
@@ -59,7 +61,6 @@ $.getJSON("../data/item.json", function (data) {
                             temMod = true;
                         }
                     }
-
                 });
             }
         });
@@ -68,3 +69,4 @@ $.getJSON("../data/item.json", function (data) {
         }
     });
 });
+

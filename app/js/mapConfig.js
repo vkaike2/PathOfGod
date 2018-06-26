@@ -1,37 +1,45 @@
 let selectMod = $('.div-options');
 let modsJaSelecionados = [];
 let saveMapHelper = [];
+let newSave = [];
+let defaultConfig = false;
 
-function iniciaCombobox() {
-
+function iniciaConfig() {
+    let dataLength = 0;
     $.getJSON("../config/map-helper.json", function (data) {
         $.each(data, function (key, val) {
+            criaDivMod(val.text,val.color,'ocultar');
+            if (val.show == 't') {
+                saveMapHelper.push([val.text, val.color, val.search]);
+            }
             $("<li/>", {
                 text: val.search,
                 "class": "option ocultar",
                 value: val.text + '-' + val.color
             }).appendTo(selectMod);
+            dataLength++;
         });
+        if (dataLength == saveMapHelper.length) {
+            defaultConfig = true;
+        } else {
+            newSave = saveMapHelper;
+        }
     }).then(() => {
-
-    });
-}
-function onlyNumber() {
-    $('.input-config-numeric').on('input', function (event) {
-        this.value = this.value.replace(/[^0-9]/g, '');
+        newSave.forEach(function(mod){
+            mostrarItemDivMod(mod[0]);
+        });
     });
 
-}
-function atualizaComponentes() {
     $.getJSON("../config/timeout.json", function (timeout) {
         $('#map-helper-timeout').val(timeout.mapHelper / 1000);
     });
+
 }
 
-function criaDivMod(mod,cor) {
-    let id = "id-" + mod.replace(" ", "-").replace("'","");
+function criaDivMod(mod, cor, clas) {
+    let id = "id-" + mod.replace(" ", "-").replace("'", "");
     $("<div/>", {
-        "class": "div-mod",
+        "class": "div-mod "+clas,
         "id": id
     }).appendTo($('#mods-adicionados'));
 
@@ -42,13 +50,14 @@ function criaDivMod(mod,cor) {
         text: mod
     }).appendTo($('#' + id));;
 }
-
-
-iniciaCombobox();
-$(document).ready(function () {
-    onlyNumber();
-    atualizaComponentes();
-
+function mostrarItemDivMod(string){
+    $(".div-mod").each(function (index) {
+        if($(this).children().text() == string){
+            $(this).removeClass('ocultar');
+        }
+    });
+}
+function controlaAbas() {
     let howToLink = $('#how-to-link');
     let howtoDiv = $('#how-to-div');
     let configLink = $("#config-link");
@@ -75,59 +84,121 @@ $(document).ready(function () {
             }
         }
     });
+}
+function mostrarDivMod(){
+    $(".div-mod").each(function (index) {
+        $(this).removeClass('ocultar');
+    });
+}
+function mostraCombobox(){
+    selectMod.removeClass('ocultar');
+    $(".option").each(function (index) {
+        $(this).removeClass('ocultar');
+    });
+}
 
-    let selectMap = $('#selectMap');
-
-    selectMap.on('input', function (event) {
-        selectMod.removeClass('ocultar');
+function mostraApenas(){
+    newSave.forEach(mod => {
         $(".option").each(function (index) {
-            if ($(this).text().includes(selectMap.val().toUpperCase())) {
-                $(this).removeClass('ocultar');
-            } else {
-                $(this).addClass('ocultar');
+            let comboMod = $(this);
+            if(mod[2] == comboMod.text()){
+                comboMod.addClass('ocultar');
             }
         });
     });
+}
+
+function escondeCombobox(){
+    selectMod.addClass('ocultar');
+    $(".option").each(function (index) {
+        $(this).addClass('ocultar');
+    });
+}
+
+function aguardaRequisicao(){
+    let { ipcRenderer } = require('electron');
+    ipcRenderer.on('mapa-config-salvo-sucesso', (event)=>{
+        alert('Save successful');
+    });
+}
+
+iniciaConfig();
+$(document).ready(function () {
+    aguardaRequisicao();
+    controlaAbas();
+    onlyNumber($('.input-config-numeric'));
 
     let arrow = $('.div-arrow');
     arrow.click(function () {
-        if(!arrow.children().hasClass('arrow-up')){
-            selectMod.removeClass('ocultar');
-            $(".option").each(function (index) {
-                $(this).removeClass('ocultar');
-            });
-        }else {
-            selectMod.addClass('ocultar');
-            $(".option").each(function (index) {
-                $(this).addClass('ocultar');
-            });
+        if (!arrow.children().hasClass('arrow-up')) {
+            if (!defaultConfig) {
+                mostraCombobox();
+                mostraApenas();
+            } else {
+               mostraCombobox();
+            }
+        } else {
+            escondeCombobox();
         }
         arrow.children().toggleClass('arrow-up')
     });
 
+    let selectMap = $('#selectMap');
+    selectMap.on('input', function (event) {
+        if (!defaultConfig) {
+            mostraCombobox();
+            if(selectMap.val() == ""){
+                escondeCombobox()
+            }else{
+                $(".option").each(function (index) {
+                    if (!$(this).text().includes(selectMap.val().toUpperCase())) {
+                        $(this).addClass('ocultar');
+                    } 
+                });
+            }
+            mostraApenas();
+        } else {
+           mostraCombobox();
+           $(".option").each(function (index) {
+            if (!$(this).text().includes(selectMap.val().toUpperCase())) {
+                $(this).addClass('ocultar');
+            } 
+        });
+        }
+    });
+
+
     $('.option').click(function (event) {
-        console.log(event.currentTarget.innerText);
+
         let textMod = event.currentTarget.attributes[1].nodeValue.split("-")[0];
         let cor = event.currentTarget.attributes[1].nodeValue.split("-")[1];
-        
-        if(modsJaSelecionados.length > 0){
-            modsJaSelecionados.forEach(mod => {
-                if(mod == event.currentTarget.innerText){
-                    alert('Really, again?');
-                    return;
-                }
-            });
-        }
-        modsJaSelecionados.push(event.currentTarget.innerText)
-        let save = [textMod, cor];
-        saveMapHelper.push(save);
-        criaDivMod(textMod,cor);
-
-        $(".option").each(function (index) {
-            $(this).addClass('ocultar');
+        let search = event.currentTarget.innerText;
+        let save = [textMod, cor, search];
+        console.log(newSave);
+        newSave.push(save);
+        console.log(newSave);
+        $(".div-mod").each(function (index) {
+            if($(this).children().text() == textMod){
+                $(this).removeClass('ocultar');
+            }
         });
-        selectMod.addClass('ocultar');
+        escondeCombobox();
         arrow.children().removeClass('arrow-up')
+    });
+    
+    $(".div-mod").click(function(event){
+        let indice = 0;
+        newSave.forEach(mod => {
+            if(mod[0] == event.currentTarget.innerText){
+                newSave.splice(indice,1);
+            }
+            indice++;
+        });
+        $(".div-mod").each(function (index) {
+            if($(this).children().text() == event.currentTarget.innerText){
+                $(this).addClass('ocultar');
+            }
+        });
     });
 
     let salvar = $('#salvar-mapa-helper');
@@ -135,6 +206,7 @@ $(document).ready(function () {
         selectMod.removeClass('ocultar');
         let mapTimeout = $('#map-helper-timeout');
         ipcRenderer.send('atualiza-timeout', mapTimeout.val());
-        ipcRenderer.send('atualiza-mapHelper', saveMapHelper);
+        console.log(newSave);
+        ipcRenderer.send('atualiza-mapHelper', newSave);
     });
 });

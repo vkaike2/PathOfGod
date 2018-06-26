@@ -117,13 +117,13 @@ module.exports = {
                     } else if (linha.includes("maximun Player")) {
                         options.minusMax = "Minus Max";
                     } else if (linha.includes("cannot Regenerate")) {
-                        options.cannotRegen = "Can't Regen";
+                        options.cannotRegen = "Cannot Regen";
                     } else if (linha.includes("cause Status") && linha.includes("Monsters")) {
                         options.monsterCauseStatus = "Chance Ailments";
                     }
                     if (nuTier >= 11) {//t 11 - 16
                         if (linha.includes("Cannot Leech")) {
-                            options.cannotLeech = "Can't Leech";
+                            options.cannotLeech = "Cannot Leech";
                         } else if (linha.includes("Hexproof")) {
                             options.hexproof = "Hexproof";
                         }
@@ -188,7 +188,7 @@ module.exports = {
                 } else if (linha.includes("Physical Damage Reduction")) {
                     options.physReduction = "Phys Reduction";
                 } else if (linha.includes("more Monster Life")) {
-                    options.cannotStun = "Can't Stun";
+                    options.cannotStun = "Cannot Stun";
                     options.monsterLife = "Monster Life";
                 } else if (linha.includes("increased Monster Damage")) {
                     options.monsterDamage = "Monster Dmg";

@@ -19,6 +19,9 @@
     margin: 3px 3px 3px 3px;
     border-radius: 5px;
 }
+.div-mod:hover{
+    cursor: pointer;
+}
 
 .texto-safe{
     font-size: 40px;
