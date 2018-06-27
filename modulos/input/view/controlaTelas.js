@@ -9,8 +9,8 @@ module.exports = {
             console.log("Aplicacao iniciada");
             this.mainWindow = new BrowserWindow({
                 width: 600,
-                height: 800
-                // frame: false
+                height: 800,
+                frame: false
             });
             this.mainWindow.setMenu(null);
             this.mainWindow.loadURL(caminhoView + `index.html`);
