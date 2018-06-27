@@ -33,6 +33,13 @@ function iniciaConfig() {
     $.getJSON("../config/timeout.json", function (timeout) {
         $('#map-helper-timeout').val(timeout.mapHelper / 1000);
     });
+    $.getJSON("../config/visualSonora.json", function (visualSonora) {
+        if(visualSonora.utilizaSom == "t"){
+            $('#radio-som').prop("checked", true);
+        }else{
+            $('#radio-imagem').prop("checked", true);
+        }
+    });
 
 }
 
@@ -206,6 +213,8 @@ $(document).ready(function () {
         selectMod.removeClass('ocultar');
         let mapTimeout = $('#map-helper-timeout');
         ipcRenderer.send('atualiza-timeout', mapTimeout.val());
+        let somOuImagem = $("input[name='visualiza-map']:checked").val();
+        ipcRenderer.send('mapa-visualizacao', somOuImagem);
         console.log(newSave);
         ipcRenderer.send('atualiza-mapHelper', newSave);
     });

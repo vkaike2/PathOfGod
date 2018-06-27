@@ -46,13 +46,27 @@ module.exports = {
             .catch((err) => {
                 console.log(err);
             });
-    }, leMapHelperConfig() {
+    }, 
+    leMapHelperConfig() {
         return jsonfile.readFile(__dirname + '/../../config/map-helper.json');
-    }, salvaMapHelperConfig(dados) {
+    }, 
+    salvaMapHelperConfig(dados) {
         return jsonfile.writeFile(__dirname + '/../../config/map-helper.json', dados, { spaces: 2 })
             .catch((err) => {
                 console.log(err);
             });
         
+    },
+    leViualizacaoMapa(){
+        return jsonfile.readFile(__dirname + '/../../config/visualSonora.json');
+    },
+    salvaViualizacaoMapa(visualizacao){
+        dados = {
+            utilizaSom: visualizacao
+        }
+        return jsonfile.writeFile(__dirname + '/../../config/visualSonora.json', dados, { spaces: 2 })
+        .catch((err) => {
+            console.log(err);
+        });
     }
 };

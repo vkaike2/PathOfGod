@@ -3,438 +3,518 @@
     "text": "Ele Reflect",
     "search": "ELEMENTAL REFLECT",
     "color": "azul",
-    "show": "t"
+    "show": "t",
+    "compara": "% of Elemental Damage"
   },
   "reflectPhysical": {
     "text": "Phy Reflect",
     "search": "PHYSICAL REFLECT",
     "color": "vermelho",
-    "show": "f"
+    "show": "t",
+    "compara": "% of Physical Damage"
   },
   "inRougueExile": {
     "text": "Rougue Exiles",
     "search": "ROUGUE EXILES",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "additional Rogue Exiles"
   },
   "inSkeletons": {
     "text": "Skeletons",
     "search": "INHABITED BY SKELETONS",
     "color": "marrom",
-    "show": "t"
+    "show": "f",
+    "compara": "Area is inhabited by Skeletons"
   },
   "inGoatmen": {
     "text": "Goatmen",
     "search": "INHABITED BY GOATMEN",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Goatmen"
   },
   "inSeaWitches": {
     "text": "Sea Witches",
     "search": "INHABITED BY SEA WITCHES",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Sea Witches and their Spawn"
   },
   "inUndead": {
     "text": "Undead",
     "search": "INHABITED BY UNDEAD",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Undead"
   },
   "inRanged": {
     "text": "Ranged",
     "search": "INHABITED BY RANGED MONSTERS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by ranged monsters"
   },
   "inAnimals": {
     "text": "Animals",
     "search": "INHABITED BY ANIMALS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Animals"
   },
   "inDemons": {
     "text": "Demons",
     "search": "INHABITED BY DEMONS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Demons"
   },
   "inHumanoids": {
     "text": "Humanoids",
     "search": "INHABITED BY HUMANOIDS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Humanoids"
   },
   "inSolaris": {
     "text": "Solaris",
     "search": "INHABITED BY SOLARIS FANATICS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Solaris fanatics"
   },
   "inLunaris": {
     "text": "Lunaris",
     "search": "INHABITED BY LUNARIS FANATICS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Lunaris fanatics"
   },
   "inGhosts": {
     "text": "Ghosts",
     "search": "INHABITED BY GHOSTS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Ghosts"
   },
   "inKitava": {
     "text": "Kitava",
     "search": "INHABITED BY CULTISTS of KITAVA",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Kitava"
   },
   "inAbominations": {
     "text": "Abominations",
     "search": "INHABITED BY ABOMINATIONS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area is inhabited by Abominations"
   },
   "Variety": {
     "text": "Variety",
     "search": "MONSTER VARIETY",
     "color": "verde",
-    "show": "f"
+    "show": "f",
+    "compara": "Area has increased monster variety"
   },
   "twoBoss": {
     "text": "2 Boss",
     "search": "TWO UNIQUE BOSS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Area contains two Unique Bosses"
   },
   "chain": {
     "text": "Chain",
     "search": "CHAIN",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "skills Chain"
   },
   "Beyond": {
     "text": "Beyond",
     "search": "BEYOND",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "Beyond"
   },
   "addProjectiles": {
     "text": "Add Proj",
     "search": "ADDITIONAL PROJECTILES",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "additional Projectiles"
   },
   "slowTaunt": {
     "text": "Slow Taunt",
     "search": "MONSTERS CANNOT BE SLOWED OR TAUNTED",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "cannot be Taunted"
   },
   "alwaysIgnite": {
     "text": "Alw Ignite",
     "search": "HITS ALWAYS IGNITES",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "All Monster Damage from Hits always Ignites"
   },
   "manyTotems": {
     "text": "Totem",
     "search": "MANY TOTEMS",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "Totems"
   },
   "nemesis": {
     "text": "Nemesis",
     "search": "NEMESIS MOD",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "Nemesis Mod"
   },
   "rareMonster": {
     "text": "Rare Monsters",
     "search": "MORE RARE MONSTERS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "more Rare Monsters"
   },
   "physReduction": {
     "text": "Phys Reduction",
     "search": "MONSTERS HAVE PHYSICAL REDUCTION",
     "color": "verde",
-    "show": "f"
+    "show": "f",
+    "compara": "Physical Damage Reduction"
   },
   "cannotStun": {
     "text": "Cannot Stun",
     "search": "MONSTERS CANNOT BE STUNNED",
     "color": "verde",
-    "show": "f"
+    "show": "f",
+    "compara": "more Monster Life"
   },
   "monsterLife": {
     "text": "Monster Life",
     "search": "MORE MONSTERS LIFE",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "more Monster Life"
   },
   "monsterDamage": {
     "text": "Monster Dmg",
     "search": "MORE DAMAGE",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "increased Monster Damage"
   },
   "damageFire": {
     "text": "Fire Dmg",
     "search": "EXTRA DAMAGE AS FIRE",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "extra Damage as Fire"
   },
   "damageCold": {
     "text": "Cold Dmg",
     "search": "EXTRA DAMAGE AS COLD",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "extra Damage as Cold"
   },
   "damageLightning": {
     "text": "Light Dmg",
     "search": "EXTRA DAMAGE AS LIGHTNING",
     "color": "verde",
-    "show": "f"
+    "show": "f",
+    "compara": "extra Damage as Lightning"
   },
   "monsterSpeed": {
     "text": "Monster speed",
     "search": "MONSTER MOVEMENT SPEED",
     "color": "verde",
-    "show": "f"
+    "show": "f",
+    "compara": "Movement Speed"
   },
   "uniqueDamage": {
     "text": "Boss Dmg",
     "search": "BOSS DAMAGE",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Boss deals/increased Damage"
   },
   "uniqueSpeed": {
     "text": "Boss Spd",
     "search": "BOSS ATACK, CAST AND MOVEMENT SPEED",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Boss has/increased Att"
   },
   "uniqueArea": {
     "text": "Boss Area",
     "search": "BOSS AREA",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "Boss has/increased Life"
   },
   "lessCurse": {
     "text": "Less Curse Effect",
     "search": "LESS CURSE EFFECT",
     "color": "roxo",
-    "show": "f"
+    "show": "f",
+    "compara": "less effect of Curses"
   },
   "chaosResistence": {
     "text": "Chaos Res",
     "search": "CHAOS RESISTENCE",
     "color": "roxo",
-    "show": "f"
+    "show": "f",
+    "compara": "Chaos Res"
   },
   "elementalResistence": {
     "text": "Ele Res",
     "search": "ELEMENTAL RESISTENCE",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "Elemental Res"
   },
   "avoidPoisonBlindBleed": {
     "text": "Avoid Poison Bleed",
     "search": "AVOID POISON AND BLEED",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "avoid Poison"
   },
   "equilibrium": {
     "text": "Ele Equilibrium",
     "search": "ELEMENTAL EQUIBRIUM",
     "color": "roxo",
-    "show": "f"
+    "show": "f",
+    "compara": "Equilibrium"
   },
   "bloodline": {
     "text": "Bloodline",
     "search": "BLOODLINE",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "Bloodline"
   },
   "magicMonster": {
     "text": "More Magic",
     "search": "MORE MAGIC MONSTERS",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "Bloodline"
   },
   "pointBlank": {
     "text": "Point Blank",
     "search": "POINT BLANK",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "Point Blank"
   },
   "poisonHit": {
     "text": "Poison on Hit",
     "search": "POISON ON HIT",
     "color": "roxo",
-    "show": "f"
+    "show": "f",
+    "compara": "Poison on Hit"
   },
   "critChance": {
     "text": "Crit Chance",
     "search": "CRITICAL CHANCE",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "Critical Strike Chance"
   },
   "critMulti": {
     "text": "Crit Multi",
     "search": "CRITICAL MULTIPLIER",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "Critical Strike Chance"
   },
   "grDesecrated": {
     "text": "Desecrated",
     "search": "DESECRATED GROUND",
     "color": "verde",
-    "show": "f"
+    "show": "f",
+    "compara": "desecrated"
   },
   "grBurning": {
     "text": "Burning",
     "search": "BURNING GROUND",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "burning"
+  },
+  "grShocking": {
+    "text": "shocking",
+    "search": "SHOCKING GROUND",
+    "color": "azul",
+    "show": "f",
+    "compara": "shocking"
   },
   "grChilled": {
-    "text": "Chilled",
+    "text": "chilled",
     "search": "CHILLED GROUND",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "chilled"
   },
   "redFlaskCharg": {
     "text": "Redu. flask",
     "search": "REDUCED FLASK CHARGES",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "reduced flask"
   },
   "monsterArea": {
     "text": "Monster Area",
     "search": "MONSTER AREA",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "Monsters/Area"
   },
   "lessArea": {
     "text": "Less Area",
     "search": "LESS AREA",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "less Area"
   },
   "avoidStatus": {
     "text": "Avoid Ailments",
     "search": "AVOID AILMENTS",
     "color": "roxo",
-    "show": "f"
+    "show": "f",
+    "compara": "Avoid Elemental"
   },
   "playerDodge": {
     "text": "Less Dodge",
     "search": "LESS DODGE",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Player Dodge"
   },
   "monsterAccuracy": {
     "text": "Monster Accuracy",
     "search": "MONSTER ACCURACY",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "Player Dodge"
   },
   "redBlockChance": {
     "text": "Redu Block",
     "search": "REDUCED BLOCK CHANCE",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "reduced Block Chance"
   },
   "lessArmour": {
     "text": "Less Armour",
     "search": "LESS ARMOUR",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "reduced Block Chance"
   },
   "recoveryRate": {
     "text": "Recovery Life ES",
     "search": "LESS RECOVERY RATE",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "Rate of Life and Energy"
   },
   "redDmgCrit": {
     "text": "Monster Redu Dmg Crit",
     "search": "MONSTERS TAKE REDUCED EXTRA DAMAGE FROM CRITICAL STRIKES",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": ""
   },
   "powerCharge": {
     "text": "Power Charge",
     "search": "POWER CHARGE",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "Charge on Hit"
   },
   "frenziCharge": {
     "text": "Frenzi Charge",
     "search": "FRENZI CHARGE",
     "color": "verde",
-    "show": "f"
+    "show": "f",
+    "compara": "Charge on Hit"
   },
   "unidentified": {
     "text": "Unidentified",
     "search": "UNDEFINED",
-    "color": "roxo",
-    "show": "t"
+    "color": "vermelho",
+    "show": "t",
+    "compara": "Unidentified"
   },
   "cuElemental": {
     "text": "Ele Weakness",
     "search": "ELEMENTAL WEAKNESS",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "Cursed/Elemental"
   },
   "cuEnfeeble": {
     "text": "Enfeeble",
     "search": "ENFEEBLE",
     "color": "verde",
-    "show": "f"
+    "show": "f",
+    "compara": "Cursed/Enfeeble"
   },
   "cuTemporal": {
     "text": "Temp Chains",
     "search": "TEMPORAL CHAINS",
     "color": "roxo",
-    "show": "f"
+    "show": "f",
+    "compara": "Cursed/Temporal"
   },
   "cuVulnerability": {
     "text": "Vulnerability",
     "search": "VULNERABILITY",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "Cursed/Vulnerability"
   },
   "minusMax": {
     "text": "Minus Max",
     "search": "MINUS MAXIMUN PLAYER RESISTENCES",
     "color": "azul",
-    "show": "f"
+    "show": "f",
+    "compara": "maximun Player"
   },
   "cannotRegen": {
     "text": "Cannot Regen",
     "search": "CANNOT REGENERATE",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "cannot Regenerate"
   },
   "monsterCauseStatus": {
     "text": "Chance Ailments",
     "search": "MONSTERS CAUSE AILMENTS",
     "color": "marrom",
-    "show": "f"
+    "show": "f",
+    "compara": "cause Status/Monsters"
   },
   "cannotLeech": {
     "text": "Cannot Leech",
     "search": "CANNOT LEECH",
     "color": "vermelho",
-    "show": "f"
+    "show": "f",
+    "compara": "Cannot Leech"
   },
   "hexproof": {
     "text": "Hexproof",
     "search": "HEXPROOF",
     "color": "roxo",
-    "show": "f"
+    "show": "f",
+    "compara": "Hexproof"
   }
 }

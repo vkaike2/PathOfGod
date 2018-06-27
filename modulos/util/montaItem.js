@@ -1,5 +1,6 @@
 
 module.exports = {
+    verific: false,
     montaMapa(conteudoItem) {
         let tipoItem = "Mapa"
         let nomeBase = "";
@@ -264,6 +265,7 @@ module.exports = {
 
 
         });
+
         let dados = {
             tipoItem: tipoItem,
             nomeBase: nomeBase,
@@ -333,5 +335,12 @@ module.exports = {
         }
 
         return dados;
+    },
+    getVerific(){//verificar
+        return this.verific;
+    },mudaSom(){
+        this.verific = true;
+    },mudaImagem(){
+        this.verific = false;
     }
 }
