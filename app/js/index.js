@@ -1,8 +1,9 @@
 let lblReciper = "Off";
 function indexVariaveis() {
     let lblMap = $('[id="map-label"]');
-    let lblRec = $('[id="recipe-label"]');
     let btnMap = $('[id="btnMap"]');
+    let btnChaosReciper = $('[id="btnChaosReciper"]');
+    let lblChaosReciper =  $('[id="recipe-label"]');
     ipcRenderer.send('lbl-Index-req');
     ipcRenderer.on('lbl-Index-Res', (event, mapa) => {
         if (mapa) {
@@ -12,7 +13,17 @@ function indexVariaveis() {
             lblMap.text('Off');
         }
         lblRec.text('Off');
-    })
+    });
+    ipcRenderer.on('lbl-Index-chaos', (event, chaos) => {
+        if (chaos) {
+            lblChaosReciper.text('On');
+            btnChaosReciper.addClass('button-basic-active');
+        } else {
+            lblChaosReciper.text('Off');
+        }
+        lblRec.text('Off');
+    });
+
 }
 
 ipcRenderer.on('item-copiado', (evt) => {
@@ -38,4 +49,20 @@ $(document).ready(function () {
         }
         btnMap.toggleClass('button-basic-active');
     });
+
+    $('[id="btnChaosReciper"]').click(function(){
+        let btnChaosReciper = $('[id="btnChaosReciper"]');
+        let lblChaosReciper =  $('[id="recipe-label"]');
+
+        if (!btnChaosReciper.hasClass('button-basic-active')) {
+            ipcRenderer.send('ativar-chaos-reciper');
+            lblChaosReciper.text('On');
+        } else {
+            ipcRenderer.send('desativar-chaos-reciper');
+            lblChaosReciper.text('Off');
+        }
+        btnChaosReciper.toggleClass('button-basic-active');
+
+    });
+
 });
