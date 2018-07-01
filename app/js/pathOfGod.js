@@ -14,6 +14,7 @@ $(document).ready(function() {
         window.location.replace("./mapConfig.html");
     });
     $('#menu-reciper').click(function(){
+        window.location.replace("./chaosReciperConfig.html");
     });
     
 });
