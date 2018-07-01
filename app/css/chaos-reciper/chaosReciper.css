@@ -1,0 +1,27 @@
+section{
+    height: 355px;
+    width: 160px;
+    border-radius: 10px;
+    /* background-color: whitesmoke; */
+}
+
+#titulo-reciper{
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.category{
+    font-size: 17px;
+    width: 105px;
+}
+.resp-category{
+    padding: 0 5px 0 5px;
+}
+
+.total{
+    margin-top: 10px;
+}
+.total-text{
+    font-size: 18px;
+}

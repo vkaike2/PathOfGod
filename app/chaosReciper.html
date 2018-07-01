@@ -1,12 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Path of God</title>
+    <link rel="stylesheet" type="text/css" href="./css/pathofgod.css">
+    <link rel="stylesheet" type="text/css" href="./css/chaos-reciper/chaosReciper.css">
 </head>
+
 <body>
-    <h1>----------------CHAOS RECIPE----------------</h1>
+    <section class="container">
+        <div class="container-row flex-justify-center" id="titulo-reciper">
+            <span>Chaos Reciper</span>
+        </div>
+        <div class="container-row flex-justify-center">
+            <div class="container-column">
+                <div class="container-row">
+                    <span class="category">Helmets:</span>
+                    <span class="resp-category" id="helmets">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">Chests:</span>
+                    <span class="resp-category" id="chests">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">Gloves:</span>
+                    <span class="resp-category" id="gloves">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">Rings:</span>
+                    <span class="resp-category" id="rings">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">Amulets:</span>
+                    <span class="resp-category" id="amulets">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">Belts:</span>
+                    <span class="resp-category" id="belts">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">1H Weapons:</span>
+                    <span class="resp-category" id="1hweapons">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">Shields:</span>
+                    <span class="resp-category" id="shields">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">2H Weapons:</span>
+                    <span class="resp-category" id="2hweapons">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">Bows:</span>
+                    <span class="resp-category" id="bows">0</span>
+                </div>
+                <div class="container-row">
+                    <span class="category">Quivers:</span>
+                    <span class="resp-category" id="quivers">0</span>
+                </div>
+                <div class="container-row total">
+                    <span class="total-text">Total Recipes:</span>
+                    <span class="total-text" id="total-recipes">0</span>
+                </div>
+                <div class="container-row flex-justify-center container">
+                    <button class="button" id="atualizar">
+                        Update
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        window.$ = window.jQuery = require("jquery");
+    </script>
+    <script src="js/pathOfGod.js"></script>
+    <script src="js/chaosReciper.js"></script>
 </body>
+
 </html>

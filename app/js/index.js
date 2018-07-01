@@ -1,4 +1,4 @@
-let lblReciper = "Off";
+// let lblReciper = "Off";
 function indexVariaveis() {
     let lblMap = $('[id="map-label"]');
     let btnMap = $('[id="btnMap"]');
@@ -31,6 +31,9 @@ ipcRenderer.on('item-copiado', (evt) => {
 });
 ipcRenderer.on('toggle-map-helper',(evt)=>{
     $('[id="btnMap"]').trigger("click");
+});
+ipcRenderer.on('toggle-chaos-reciper',(evt)=>{
+    $('[id="btnChaosReciper"]').trigger("click");
 });
 
 $(document).ready(function () {

@@ -1,4 +1,4 @@
-const { ipcMain,BrowserWindow } = require('electron');
+const { ipcMain, BrowserWindow, globalShortcut } = require('electron');
 // const size = require('window-size');
 
 module.exports = {
@@ -6,27 +6,27 @@ module.exports = {
     chaosWindow: null,
     inicia() {
         let { screen } = require('electron');
-        let altura = 150;
-        let largura = 600;
+        let altura = 370;
+        let largura = 175;
         let mainScreen = screen.getPrimaryDisplay();
         let caminhoView = `file://${__dirname}/../../../app/`;
         this.chaosWindow = new BrowserWindow({
             width: largura,
             height: altura,
             alwaysOnTop: true,
-            // frame: false,
-            x:((mainScreen.bounds.width - largura)/2),
-            y: 0,
-            frame: false
+            frame: false,
+            x: 1,
+            y: ((mainScreen.bounds.height - altura) / 2)
         });
         // C:\Users\VICTOR\Desktop\GIT\PathOfGod\app\chaosReciper.html
-        this.chaosWindow.loadURL(caminhoView+`chaosReciper.html`);
+        this.chaosWindow.loadURL(caminhoView + `chaosReciper.html`);
         // this.mainWindow.loadURL(caminhoView + `index.html`);
     },
     consultaView(mainWindow) {
+        this.toggleChaosReciper(mainWindow);
         ipcMain.on('ativar-chaos-reciper', () => {
             this.chaosReciper = true;
-            
+
             // console.log(screen);
             this.inicia();
         });
@@ -38,6 +38,10 @@ module.exports = {
         ipcMain.on('lbl-Index-req', () => {
             mainWindow.send('lbl-Index-chaos', this.chaosReciper);
         });
-
-    }
+    },
+     toggleChaosReciper(mainWindow) {
+        globalShortcut.register('CmdOrCtrl+Alt+C', () => {
+            mainWindow.send('toggle-chaos-reciper');
+        });
+    },
 };

@@ -92,7 +92,10 @@ body {
     display: flex;
     flex-direction: row;
 }
-
+.container-column{
+    display: flex;
+    flex-direction: column;
+}
 .container-conteudo {
     margin: 15% 15% 15% 15%;
 }
