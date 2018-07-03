@@ -13,7 +13,7 @@ module.exports = {
                 height: 800
                 // frame: false
             });
-            this.mainWindow.setMenu(null);
+            // this.mainWindow.setMenu(null);
             this.mainWindow.loadURL(caminhoView + `index.html`);
             this.buscaRequisicao();
         });

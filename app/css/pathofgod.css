@@ -357,3 +357,20 @@ body {
     border-bottom-right-radius: 4px;
 }
 
+.input-config{
+    /* text-align: center; */
+    /* border-style: none; */
+    border-radius: 2px;
+    height: 20px;
+    font-size: 20px;
+    font: 16px Arial, Helvetica, sans-serif;
+    color: #252525;
+    margin: 0 0 5px 0;
+    padding: 0 5px 0 5px;
+}
+
+.div-stashes{
+    width: 100%;
+    background-color: whitesmoke;
+    min-height: 150px;
+}

@@ -14,7 +14,7 @@ module.exports = {
             width: largura,
             height: altura,
             alwaysOnTop: true,
-            frame: false,
+            // frame: false,
             x: 1,
             y: ((mainScreen.bounds.height - altura) / 2)
         });

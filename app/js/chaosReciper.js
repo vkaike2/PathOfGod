@@ -252,6 +252,7 @@ function montaRecipe() {
     }
     // console.log(recipes);
     recipesTotal = contaRecipes(recipes);
+    // console.log(recipesTotal);
     atualizaElementos();
 }
 
