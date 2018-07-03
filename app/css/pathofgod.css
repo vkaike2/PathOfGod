@@ -209,7 +209,6 @@ body {
 .text-conteudo-titulo {
     font-size: 20px;
 }
-
 .text-conteudo-resposta {
     font-size: 15px;
 }
@@ -369,8 +368,3 @@ body {
     padding: 0 5px 0 5px;
 }
 
-.div-stashes{
-    width: 100%;
-    background-color: whitesmoke;
-    min-height: 150px;
-}

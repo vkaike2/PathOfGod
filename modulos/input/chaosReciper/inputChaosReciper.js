@@ -1,5 +1,6 @@
 const { ipcMain, BrowserWindow, globalShortcut } = require('electron');
 // const size = require('window-size');
+const data = require('../../json/data');
 
 module.exports = {
     chaosReciper: false,
@@ -14,7 +15,7 @@ module.exports = {
             width: largura,
             height: altura,
             alwaysOnTop: true,
-            // frame: false,
+            frame: false,
             x: 1,
             y: ((mainScreen.bounds.height - altura) / 2)
         });
@@ -26,11 +27,8 @@ module.exports = {
         this.toggleChaosReciper(mainWindow);
         ipcMain.on('ativar-chaos-reciper', () => {
             this.chaosReciper = true;
-
-            // console.log(screen);
             this.inicia();
         });
-
         ipcMain.on('desativar-chaos-reciper', () => {
             this.chaosReciper = false;
             this.chaosWindow.close();
@@ -38,10 +36,17 @@ module.exports = {
         ipcMain.on('lbl-Index-req', () => {
             mainWindow.send('lbl-Index-chaos', this.chaosReciper);
         });
+        ipcMain.on('atualiza-chaosReciper',(evt,dados)=>{
+            data.salvaChaosReciperConfig(dados);
+            mainWindow.send('feedback-salvar');
+        });
+        ipcMain.on('salva-json-recipe',(evt,recipes)=>{
+            data.salvaJsonRecipe(recipes);
+        })
     },
      toggleChaosReciper(mainWindow) {
         globalShortcut.register('CmdOrCtrl+Alt+C', () => {
             mainWindow.send('toggle-chaos-reciper');
         });
-    },
+    }
 };

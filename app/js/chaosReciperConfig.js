@@ -1,3 +1,5 @@
+let stashsParaProcurar = [];
+
 function controlaAbas() {
     let howToLink = $('#how-to-link');
     let howtoDiv = $('#how-to-div');
@@ -26,8 +28,61 @@ function controlaAbas() {
         }
     });
 }
+function addStash(stash){
+    $('<div/>',{
+        "class":"div-stash",
+        "id":`id-${stash}`,
+        'onclick': `removeStash('id-${stash}')`
+    }).appendTo($('#div-stashes'));
+
+    $("<span/>", {
+        "class": "texto-mod",
+        text: stash
+    }).appendTo($(`#id-${stash}`));
+}
+
+function removeStash(id){
+    $(`#${id}`).addClass("ocultar");
+}
+
+function iniciaValores(){
+    $.getJSON("../config/chaos-reciper-config.json", function (data) {
+        console.log(data);
+        $('#account-name').val(data.accountName);
+        data.stashes.forEach(stash => {
+            stashsParaProcurar.push(stash);
+            addStash(stash);
+        });
+    });
+}
 
 $(document).ready(function () {
     controlaAbas();
+    iniciaValores();
+    $('#add-stash').click(function(){
+        let stashes = $('#stashes');
+        if(stashes.val() == "" || stashes.val() == undefined){
+            alert('Please write at last one stash name');
+        }else{
+            stashsParaProcurar.push(stashes.val());
+            addStash(stashes.val());
+            stashes.val("");
+        } 
+    });
+
+    $('#salvar-chaos-reciper').click(function(){
+        let dados = {
+            accountName: "",
+            stashes: []
+        }
+        dados.accountName = $('#account-name').val();
+        dados.stashes = stashsParaProcurar;
+        console.log(dados);
+
+        ipcRenderer.send('atualiza-chaosReciper',dados)
+    });
+    ipcRenderer.on('feedback-salvar',()=>{
+        alert('salvo com sucesso');
+    });
 });
 

@@ -46,25 +46,37 @@ module.exports = {
             .catch((err) => {
                 console.log(err);
             });
-    }, 
+    },
     leMapHelperConfig() {
         return jsonfile.readFile(__dirname + '/../../config/map-helper.json');
-    }, 
+    },
     salvaMapHelperConfig(dados) {
         return jsonfile.writeFile(__dirname + '/../../config/map-helper.json', dados, { spaces: 2 })
             .catch((err) => {
                 console.log(err);
             });
-        
+
     },
-    leViualizacaoMapa(){
+    leViualizacaoMapa() {
         return jsonfile.readFile(__dirname + '/../../config/visualSonora.json');
     },
-    salvaViualizacaoMapa(visualizacao){
+    salvaViualizacaoMapa(visualizacao) {
         dados = {
             utilizaSom: visualizacao
         }
         return jsonfile.writeFile(__dirname + '/../../config/visualSonora.json', dados, { spaces: 2 })
+            .catch((err) => {
+                console.log(err);
+            });
+    },
+    salvaChaosReciperConfig(dados) {
+        return jsonfile.writeFile(__dirname + '/../../config/chaos-reciper-config.json', dados, { spaces: 2 })
+            .catch((err) => {
+                console.log(err);
+            });
+    },
+    salvaJsonRecipe(dados){
+        return jsonfile.writeFile(__dirname + '/../../config/chaosProntinho.json', dados, { spaces: 2 })
         .catch((err) => {
             console.log(err);
         });

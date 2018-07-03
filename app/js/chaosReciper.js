@@ -253,6 +253,7 @@ function montaRecipe() {
     // console.log(recipes);
     recipesTotal = contaRecipes(recipes);
     // console.log(recipesTotal);
+    ipcRenderer.send('salva-json-recipe', recipesTotal);
     atualizaElementos();
 }
 
@@ -276,7 +277,7 @@ function contaRecipes(recipes) {
     // console.log(listRecipeSalva);
     return listRecipeSalva;
 }
-function pesquisaItens(arrayUrl, maxCategorias) {
+function pesquisaItens(arrayUrl, maxCategorias,stashes) {
     let indice = 0;
     if (arrayUrl.length == 0) {
         //nao possui tipo do iten
@@ -290,18 +291,23 @@ function pesquisaItens(arrayUrl, maxCategorias) {
                     let listing = element.listing;
                     let item = element.item;
                     if (element != null) {
-                        if (listing.stash.name != 'anus') {
-                            if (item.category.accessories) {
-                                filtraAcessories(item, listing);
-                            } else if (item.category.weapons) {
-                                filtraWeapons(item, listing);
-                            } else if (item.category.armour) {
-                                filtraArmour(item, listing);
-                            } else {
-                                console.log("Item nao mapeado");
+                        // if (listing.stash.name != 'anus') {
+                        stashes.forEach((stash)=>{
+                            console.log(stash);
+                            if (listing.stash.name == stash) {
+                                if (item.category.accessories) {
+                                    filtraAcessories(item, listing);
+                                } else if (item.category.weapons) {
+                                    filtraWeapons(item, listing);
+                                } else if (item.category.armour) {
+                                    filtraArmour(item, listing);
+                                } else {
+                                    console.log("Item nao mapeado");
+                                }
                             }
+                        });
                         }
-                    }
+                    // }
                 });
             }).done(function () {
                 indice++;
@@ -316,6 +322,18 @@ function pesquisaItens(arrayUrl, maxCategorias) {
     }
 }
 
+function iniciaTuto(){
+    let baus = [];
+    let nomeDaConta;
+    $.getJSON("../config/chaos-reciper-config.json", function (data) {
+        nomeDaConta = data.accountName;
+        baus = data.stashes;
+    }).done(function(){
+        // console.log(nomeDaConta)
+        // console.log(baus)
+        buscaItens(nomeDaConta,baus)
+    })
+}
 //BUSCAS
 function buscaLadder() {
     $.get("https://www.pathofexile.com/api/trade/data/leagues", function (data, status) {
@@ -323,7 +341,7 @@ function buscaLadder() {
     });
 }
 
-function buscaItens(accountName) {
+function buscaItens(accountName,stashes) {
     let tiposDeItem = [
         //armour
         "armour.gloves", "armour.helmet", "armour.chest", "armour.quiver", "armour.shield",
@@ -388,7 +406,7 @@ function buscaItens(accountName) {
             data: JSON.stringify(data),
             dataType: 'json',
             success: function (json) {
-                pesquisaItens(montaArrayUrl(json), tiposDeItem.length);
+                pesquisaItens(montaArrayUrl(json), tiposDeItem.length,stashes);
             }, error: function (jqXhr, textStatus, errorThrown) {
                 console.log(errorThrown);
             }
@@ -523,8 +541,8 @@ $(document).ready(function () {
 
     // limpaTudo();
     iniciaElementos();
-    buscaItens("vk41k32006");
-
+    // buscaItens("vk41k32006");
+    iniciaTuto();
     $("#atualizar").click(function () {
         if (podeAtualiza) {
             location.reload();
