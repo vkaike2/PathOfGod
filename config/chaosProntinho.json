@@ -4,16 +4,24 @@
       "category": "amulet",
       "stash": {
         "name": "Jew",
-        "x": 0,
-        "y": 0
+        "x": 3,
+        "y": 3
       }
     },
     "belt": {
       "category": "belt",
       "stash": {
         "name": "Jew",
-        "x": 8,
-        "y": 0
+        "x": 10,
+        "y": 9
+      }
+    },
+    "boots": {
+      "category": "boots",
+      "stash": {
+        "name": "Bo",
+        "x": 4,
+        "y": 6
       }
     },
     "bothHands": null,
@@ -23,804 +31,43 @@
       "stash": {
         "name": "Arm",
         "x": 6,
-        "y": 0
+        "y": 9
       }
     },
     "firstRing": {
       "category": "ring",
       "stash": {
         "name": "Jew",
-        "x": 4,
-        "y": 8
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 2,
-        "y": 10
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 0,
-        "y": 6
-      }
-    },
-    "leftHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 3,
-        "y": 0
-      }
-    },
-    "quiver": null,
-    "rightHand": {
-      "category": "dagger",
-      "stash": {
-        "name": "Ar",
         "x": 5,
-        "y": 6
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 1,
-        "y": 6
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 0,
-        "y": 1
-      }
-    },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
-        "x": 8,
-        "y": 3
-      }
-    },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 0,
-        "y": 6
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 1,
-        "y": 0
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 2,
-        "y": 0
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 2,
-        "y": 2
-      }
-    },
-    "leftHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 3,
-        "y": 3
-      }
-    },
-    "quiver": null,
-    "rightHand": {
-      "category": "dagger",
-      "stash": {
-        "name": "Ar",
-        "x": 1,
-        "y": 0
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 2,
-        "y": 1
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 0,
-        "y": 8
-      }
-    },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
-        "x": 10,
-        "y": 4
-      }
-    },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 6,
-        "y": 6
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 2,
-        "y": 0
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 2,
-        "y": 4
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 2,
-        "y": 4
-      }
-    },
-    "leftHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 0,
-        "y": 0
-      }
-    },
-    "quiver": null,
-    "rightHand": {
-      "category": "dagger",
-      "stash": {
-        "name": "Ar",
-        "x": 2,
-        "y": 6
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 4,
-        "y": 9
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 3,
-        "y": 4
-      }
-    },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
-        "x": 6,
-        "y": 8
-      }
-    },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 0,
-        "y": 9
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 1,
-        "y": 10
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 0,
-        "y": 2
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 0,
-        "y": 2
-      }
-    },
-    "leftHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 4,
-        "y": 6
-      }
-    },
-    "quiver": null,
-    "rightHand": {
-      "category": "dagger",
-      "stash": {
-        "name": "Ar",
-        "x": 2,
-        "y": 3
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 1,
-        "y": 3
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 3,
-        "y": 5
-      }
-    },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
-        "x": 8,
-        "y": 4
-      }
-    },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 8,
-        "y": 3
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 1,
-        "y": 4
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 0,
-        "y": 8
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 0,
-        "y": 0
-      }
-    },
-    "leftHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 4,
-        "y": 9
-      }
-    },
-    "quiver": null,
-    "rightHand": {
-      "category": "dagger",
-      "stash": {
-        "name": "Ar",
-        "x": 1,
-        "y": 6
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 2,
-        "y": 9
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 3,
-        "y": 6
-      }
-    },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
-        "x": 10,
-        "y": 7
-      }
-    },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 6,
-        "y": 3
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 1,
-        "y": 9
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 0,
-        "y": 6
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 0,
-        "y": 4
-      }
-    },
-    "leftHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 1,
-        "y": 3
-      }
-    },
-    "quiver": null,
-    "rightHand": {
-      "category": "dagger",
-      "stash": {
-        "name": "Ar",
-        "x": 2,
-        "y": 0
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 1,
-        "y": 8
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 3,
-        "y": 3
-      }
-    },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
-        "x": 10,
-        "y": 1
-      }
-    },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 2,
-        "y": 6
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 1,
-        "y": 2
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 0,
-        "y": 4
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 2,
-        "y": 10
-      }
-    },
-    "leftHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 3,
-        "y": 9
-      }
-    },
-    "quiver": null,
-    "rightHand": {
-      "category": "dagger",
-      "stash": {
-        "name": "Ar",
-        "x": 0,
-        "y": 9
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 2,
-        "y": 11
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 0,
         "y": 11
       }
     },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
-        "x": 10,
-        "y": 6
-      }
-    },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 2,
-        "y": 0
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 5,
-        "y": 9
-      }
-    },
     "gloves": {
       "category": "gloves",
       "stash": {
         "name": "Gl",
-        "x": 4,
-        "y": 0
+        "x": 2,
+        "y": 8
       }
     },
     "helmet": {
       "category": "helmet",
       "stash": {
         "name": "He",
-        "x": 0,
-        "y": 10
-      }
-    },
-    "leftHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 0,
-        "y": 6
-      }
-    },
-    "quiver": null,
-    "rightHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 4,
-        "y": 3
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 5,
-        "y": 8
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 0,
-        "y": 10
-      }
-    },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
         "x": 10,
-        "y": 11
-      }
-    },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 2,
-        "y": 3
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 2,
         "y": 10
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 0,
-        "y": 0
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 2,
-        "y": 8
       }
     },
     "leftHand": {
-      "category": "onemace",
-      "stash": {
-        "name": "Ar",
-        "x": 1,
-        "y": 9
-      }
-    },
-    "quiver": null,
-    "rightHand": {
       "category": "wand",
       "stash": {
-        "name": "Ar",
-        "x": 3,
-        "y": 6
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 5,
-        "y": 7
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 3,
-        "y": 10
-      }
-    },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
+        "name": "Bo",
         "x": 6,
         "y": 9
       }
     },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 4,
-        "y": 6
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 4,
-        "y": 7
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 2,
-        "y": 6
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 2,
-        "y": 0
-      }
-    },
-    "leftHand": {
-      "category": "onesword",
-      "stash": {
-        "name": "Ar",
-        "x": 0,
-        "y": 3
-      }
-    },
     "quiver": null,
     "rightHand": {
-      "category": "wand",
-      "stash": {
-        "name": "Ar",
-        "x": 4,
-        "y": 0
-      }
-    },
-    "secondRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 2,
-        "y": 5
-      }
-    }
-  },
-  {
-    "amulet": {
-      "category": "amulet",
-      "stash": {
-        "name": "Jew",
-        "x": 1,
-        "y": 5
-      }
-    },
-    "belt": {
-      "category": "belt",
-      "stash": {
-        "name": "Jew",
-        "x": 8,
-        "y": 1
-      }
-    },
-    "bothHands": null,
-    "bow": null,
-    "chest": {
-      "category": "chest",
-      "stash": {
-        "name": "Arm",
-        "x": 4,
-        "y": 9
-      }
-    },
-    "firstRing": {
-      "category": "ring",
-      "stash": {
-        "name": "Jew",
-        "x": 2,
-        "y": 8
-      }
-    },
-    "gloves": {
-      "category": "gloves",
-      "stash": {
-        "name": "Gl",
-        "x": 2,
-        "y": 2
-      }
-    },
-    "helmet": {
-      "category": "helmet",
-      "stash": {
-        "name": "He",
-        "x": 0,
-        "y": 8
-      }
-    },
-    "leftHand": {
       "category": "onesword",
       "stash": {
         "name": "Ar",
@@ -828,21 +75,607 @@
         "y": 9
       }
     },
+    "secondRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Jew",
+        "x": 4,
+        "y": 0
+      }
+    }
+  },
+  {
+    "amulet": {
+      "category": "amulet",
+      "stash": {
+        "name": "Jew",
+        "x": 3,
+        "y": 5
+      }
+    },
+    "belt": {
+      "category": "belt",
+      "stash": {
+        "name": "Jew",
+        "x": 8,
+        "y": 8
+      }
+    },
+    "boots": {
+      "category": "boots",
+      "stash": {
+        "name": "Bo",
+        "x": 2,
+        "y": 2
+      }
+    },
+    "bothHands": null,
+    "bow": null,
+    "chest": {
+      "category": "chest",
+      "stash": {
+        "name": "Arm",
+        "x": 7,
+        "y": 6
+      }
+    },
+    "firstRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Jew",
+        "x": 2,
+        "y": 7
+      }
+    },
+    "gloves": {
+      "category": "gloves",
+      "stash": {
+        "name": "Gl",
+        "x": 4,
+        "y": 0
+      }
+    },
+    "helmet": {
+      "category": "helmet",
+      "stash": {
+        "name": "He",
+        "x": 6,
+        "y": 8
+      }
+    },
+    "leftHand": {
+      "category": "dagger",
+      "stash": {
+        "name": "Bo",
+        "x": 7,
+        "y": 9
+      }
+    },
     "quiver": null,
     "rightHand": {
-      "category": "wand",
+      "category": "dagger",
       "stash": {
         "name": "Ar",
-        "x": 5,
-        "y": 9
+        "x": 1,
+        "y": 6
       }
     },
     "secondRing": {
       "category": "ring",
       "stash": {
         "name": "Jew",
+        "x": 3,
+        "y": 10
+      }
+    }
+  },
+  {
+    "amulet": {
+      "category": "amulet",
+      "stash": {
+        "name": "Jew",
+        "x": 3,
+        "y": 1
+      }
+    },
+    "belt": {
+      "category": "belt",
+      "stash": {
+        "name": "Jew",
+        "x": 10,
+        "y": 10
+      }
+    },
+    "boots": {
+      "category": "boots",
+      "stash": {
+        "name": "Bo",
+        "x": 2,
+        "y": 4
+      }
+    },
+    "bothHands": null,
+    "bow": null,
+    "chest": {
+      "category": "chest",
+      "stash": {
+        "name": "Arm",
+        "x": 4,
+        "y": 3
+      }
+    },
+    "firstRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Jew",
+        "x": 2,
+        "y": 3
+      }
+    },
+    "gloves": {
+      "category": "gloves",
+      "stash": {
+        "name": "Gl",
+        "x": 0,
+        "y": 0
+      }
+    },
+    "helmet": {
+      "category": "helmet",
+      "stash": {
+        "name": "Ar",
+        "x": 7,
+        "y": 8
+      }
+    },
+    "leftHand": {
+      "category": "wand",
+      "stash": {
+        "name": "Gl",
+        "x": 4,
+        "y": 7
+      }
+    },
+    "quiver": null,
+    "rightHand": {
+      "category": "wand",
+      "stash": {
+        "name": "Ar",
+        "x": 1,
+        "y": 3
+      }
+    },
+    "secondRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Ar",
+        "x": 2,
+        "y": 1
+      }
+    }
+  },
+  {
+    "amulet": {
+      "category": "amulet",
+      "stash": {
+        "name": "Jew",
+        "x": 1,
+        "y": 5
+      }
+    },
+    "belt": {
+      "category": "belt",
+      "stash": {
+        "name": "Jew",
+        "x": 8,
+        "y": 10
+      }
+    },
+    "boots": {
+      "category": "boots",
+      "stash": {
+        "name": "Bo",
+        "x": 7,
+        "y": 0
+      }
+    },
+    "bothHands": null,
+    "bow": null,
+    "chest": {
+      "category": "chest",
+      "stash": {
+        "name": "Arm",
+        "x": 2,
+        "y": 9
+      }
+    },
+    "firstRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Jew",
+        "x": 2,
+        "y": 1
+      }
+    },
+    "gloves": {
+      "category": "gloves",
+      "stash": {
+        "name": "Gl",
+        "x": 2,
+        "y": 0
+      }
+    },
+    "helmet": {
+      "category": "helmet",
+      "stash": {
+        "name": "Bo",
+        "x": 6,
+        "y": 7
+      }
+    },
+    "leftHand": {
+      "category": "wand",
+      "stash": {
+        "name": "Gl",
+        "x": 5,
+        "y": 7
+      }
+    },
+    "quiver": null,
+    "rightHand": {
+      "category": "dagger",
+      "stash": {
+        "name": "Ar",
+        "x": 0,
+        "y": 6
+      }
+    },
+    "secondRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Ar",
+        "x": 0,
+        "y": 2
+      }
+    }
+  },
+  {
+    "amulet": {
+      "category": "amulet",
+      "stash": {
+        "name": "Jew",
+        "x": 0,
+        "y": 10
+      }
+    },
+    "belt": {
+      "category": "belt",
+      "stash": {
+        "name": "Jew",
+        "x": 10,
+        "y": 2
+      }
+    },
+    "boots": {
+      "category": "boots",
+      "stash": {
+        "name": "Bo",
+        "x": 2,
+        "y": 6
+      }
+    },
+    "bothHands": null,
+    "bow": null,
+    "chest": {
+      "category": "chest",
+      "stash": {
+        "name": "Arm",
+        "x": 0,
+        "y": 3
+      }
+    },
+    "firstRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Jew",
+        "x": 1,
+        "y": 8
+      }
+    },
+    "gloves": {
+      "category": "gloves",
+      "stash": {
+        "name": "Gl",
+        "x": 0,
+        "y": 4
+      }
+    },
+    "helmet": {
+      "category": "helmet",
+      "stash": {
+        "name": "Ar",
+        "x": 7,
+        "y": 3
+      }
+    },
+    "leftHand": {
+      "category": "wand",
+      "stash": {
+        "name": "Ar",
+        "x": 3,
+        "y": 5
+      }
+    },
+    "quiver": null,
+    "rightHand": {
+      "category": "wand",
+      "stash": {
+        "name": "Ar",
+        "x": 4,
+        "y": 3
+      }
+    },
+    "secondRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Bo",
+        "x": 5,
+        "y": 0
+      }
+    }
+  },
+  {
+    "amulet": {
+      "category": "amulet",
+      "stash": {
+        "name": "Jew",
+        "x": 3,
+        "y": 8
+      }
+    },
+    "belt": {
+      "category": "belt",
+      "stash": {
+        "name": "Jew",
+        "x": 8,
+        "y": 7
+      }
+    },
+    "boots": {
+      "category": "boots",
+      "stash": {
+        "name": "Bo",
+        "x": 4,
+        "y": 10
+      }
+    },
+    "bothHands": null,
+    "bow": null,
+    "chest": {
+      "category": "chest",
+      "stash": {
+        "name": "Arm",
+        "x": 8,
+        "y": 0
+      }
+    },
+    "firstRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Jew",
+        "x": 5,
+        "y": 8
+      }
+    },
+    "gloves": {
+      "category": "gloves",
+      "stash": {
+        "name": "Ar",
+        "x": 6,
+        "y": 6
+      }
+    },
+    "helmet": {
+      "category": "helmet",
+      "stash": {
+        "name": "Gl",
+        "x": 0,
+        "y": 2
+      }
+    },
+    "leftHand": {
+      "category": "wand",
+      "stash": {
+        "name": "Ar",
+        "x": 3,
+        "y": 2
+      }
+    },
+    "quiver": null,
+    "rightHand": {
+      "category": "dagger",
+      "stash": {
+        "name": "Ar",
+        "x": 0,
+        "y": 9
+      }
+    },
+    "secondRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Bo",
+        "x": 4,
+        "y": 1
+      }
+    }
+  },
+  {
+    "amulet": {
+      "category": "amulet",
+      "stash": {
+        "name": "Jew",
+        "x": 0,
+        "y": 11
+      }
+    },
+    "belt": {
+      "category": "belt",
+      "stash": {
+        "name": "Jew",
+        "x": 10,
+        "y": 5
+      }
+    },
+    "boots": {
+      "category": "boots",
+      "stash": {
+        "name": "Bo",
+        "x": 0,
+        "y": 4
+      }
+    },
+    "bothHands": null,
+    "bow": null,
+    "chest": {
+      "category": "chest",
+      "stash": {
+        "name": "Arm",
+        "x": 6,
+        "y": 0
+      }
+    },
+    "firstRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Jew",
+        "x": 2,
+        "y": 5
+      }
+    },
+    "gloves": {
+      "category": "gloves",
+      "stash": {
+        "name": "Bo",
+        "x": 6,
+        "y": 2
+      }
+    },
+    "helmet": {
+      "category": "helmet",
+      "stash": {
+        "name": "Ar",
+        "x": 9,
+        "y": 3
+      }
+    },
+    "leftHand": {
+      "category": "dagger",
+      "stash": {
+        "name": "Ar",
+        "x": 4,
+        "y": 0
+      }
+    },
+    "quiver": null,
+    "rightHand": {
+      "category": "wand",
+      "stash": {
+        "name": "Ar",
+        "x": 6,
+        "y": 8
+      }
+    },
+    "secondRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Ar",
+        "x": 2,
+        "y": 3
+      }
+    }
+  },
+  {
+    "amulet": {
+      "category": "amulet",
+      "stash": {
+        "name": "Jew",
+        "x": 0,
+        "y": 3
+      }
+    },
+    "belt": {
+      "category": "belt",
+      "stash": {
+        "name": "Jew",
+        "x": 8,
+        "y": 6
+      }
+    },
+    "boots": {
+      "category": "boots",
+      "stash": {
+        "name": "Bo",
+        "x": 0,
+        "y": 10
+      }
+    },
+    "bothHands": null,
+    "bow": null,
+    "chest": {
+      "category": "chest",
+      "stash": {
+        "name": "Arm",
+        "x": 8,
+        "y": 3
+      }
+    },
+    "firstRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Jew",
         "x": 4,
         "y": 6
+      }
+    },
+    "gloves": {
+      "category": "gloves",
+      "stash": {
+        "name": "Ar",
+        "x": 3,
+        "y": 10
+      }
+    },
+    "helmet": {
+      "category": "helmet",
+      "stash": {
+        "name": "Ar",
+        "x": 4,
+        "y": 6
+      }
+    },
+    "leftHand": {
+      "category": "wand",
+      "stash": {
+        "name": "Ar",
+        "x": 11,
+        "y": 0
+      }
+    },
+    "quiver": null,
+    "rightHand": {
+      "category": "dagger",
+      "stash": {
+        "name": "Ar",
+        "x": 1,
+        "y": 0
+      }
+    },
+    "secondRing": {
+      "category": "ring",
+      "stash": {
+        "name": "Ar",
+        "x": 2,
+        "y": 4
       }
     }
   }

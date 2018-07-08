@@ -6,6 +6,7 @@ let request;
 let gloves = [];
 let helmets = [];
 let chests = [];
+let boots = [];
 let belts = [];
 let amulets = [];
 let rings = [];
@@ -63,6 +64,7 @@ function limpaRecipe() {
         gloves: null,
         helmet: null,
         chest: null,
+        boots: null,
         bothHands: null,
         rightHand: null,
         leftHand: null,
@@ -82,6 +84,7 @@ function montaRecipe() {
         gloves: null,
         helmet: null,
         chest: null,
+        boots: null,
         bothHands: null,
         rightHand: null,
         leftHand: null,
@@ -113,6 +116,18 @@ function montaRecipe() {
                 recipes.push(recipe);
             } else {
                 recipes[index].helmet = capacete;
+            }
+        })
+    }
+
+    if (boots.length > 0) {
+        boots.forEach((botas, index) => {
+            if (recipes[index] == undefined) {
+                recipe = limpaRecipe();
+                recipe.boots = botas;
+                recipes.push(recipe);
+            } else {
+                recipes[index].boots = botas;
             }
         })
     }
@@ -262,7 +277,7 @@ function contaRecipes(recipes) {
     let listRecipeSalva = [];
     recipes.forEach((recipe) => {
         if (recipe.gloves != null && recipe.helmet != null && recipe.chest != null &&
-            recipe.belt != null && recipe.amulet != null) {
+            recipe.belt != null && recipe.amulet != null && recipe.boots != null) {
             if (recipe.firstRing != null && recipe.secondRing != null) {
                 if (recipe.bothHands != null && recipe.rightHand == null && recipe.leftHand == null) {
                     listRecipeSalva.push(recipe);//2Hand Recipe
@@ -293,7 +308,7 @@ function pesquisaItens(arrayUrl, maxCategorias,stashes) {
                     if (element != null) {
                         // if (listing.stash.name != 'anus') {
                         stashes.forEach((stash)=>{
-                            console.log(stash);
+                            // console.log(stash);
                             if (listing.stash.name == stash) {
                                 if (item.category.accessories) {
                                     filtraAcessories(item, listing);
@@ -343,15 +358,14 @@ function buscaLadder() {
 
 function buscaItens(accountName,stashes) {
     let tiposDeItem = [
-        //armour
-        "armour.gloves", "armour.helmet", "armour.chest", "armour.quiver", "armour.shield",
+        //armour"armour.boots",
+        "armour", 
         //1h weapons
-        "weapon.dagger", "weapon.wand", "weapon.onemace", "weapon.onesword", "weapon.oneaxe", "weapon.claw"
-        , "weapon.sceptre",
+        "weapon",
         //2h weapons                                                                                           
-        "weapon.twomace", "weapon.twoaxe", "weapon.staff", "weapon.twosword", "weapon.bow",
+        // "weapon.twomace", "weapon.twoaxe", "weapon.staff", "weapon.twosword", "weapon.bow",
         //accessory                                 
-        "accessory.belt", "accessory.ring", "accessory.amulet"
+        "accessory"
     ];
 
     tiposDeItem.forEach(tipoItem => {
@@ -374,7 +388,7 @@ function buscaItens(accountName,stashes) {
                                 option: "rare"
                             },
                             category: {
-                                option: tipoItem
+                                option:tipoItem
                             }
                         },
                         disabled: false
@@ -399,6 +413,9 @@ function buscaItens(accountName,stashes) {
                 price: "asc"
             }
         }
+        // if(tipoItem == "armour.boots"){
+        //     console.log("teste");
+        // }
         $.ajax({
             type: "POST",
             url: "https://www.pathofexile.com/api/trade/search/Hardcore%20Incursion",
@@ -406,7 +423,7 @@ function buscaItens(accountName,stashes) {
             data: JSON.stringify(data),
             dataType: 'json',
             success: function (json) {
-                pesquisaItens(montaArrayUrl(json), tiposDeItem.length,stashes);
+                pesquisaItens(montaArrayUrl(json), tiposDeItem.length ,stashes);
             }, error: function (jqXhr, textStatus, errorThrown) {
                 console.log(errorThrown);
             }
@@ -416,7 +433,6 @@ function buscaItens(accountName,stashes) {
 
 //Filtros
 function filtraArmour(item, listing) {
-    // console.log(item.category);
     switch (item.category.armour[0]) {
         case "gloves":
             gloves.push(adcionaItem(item.category.armour[0], listing));
@@ -430,6 +446,9 @@ function filtraArmour(item, listing) {
         case "quiver":
             quivers.push(adcionaItem(item.category.armour[0], listing));
             break;
+        case "boots":
+            boots.push(adcionaItem(item.category.armour[0], listing));
+            break;    
         case "shield":
             shields.push(adcionaItem(item.category.armour[0], listing));
             break;
@@ -495,6 +514,7 @@ function iniciaElementos() {
     $('#helmets').text("...");
     $('#chests').text("...");
     $('#gloves').text("...");
+    $('#boots').text("...");
     $('#rings').text("...");
     $('#amulets').text("...");
     $('#belts').text("...");
@@ -507,8 +527,9 @@ function iniciaElementos() {
 }
 function atualizaElementos() {
     $('#helmets').text(helmets.length);
-    $('#chests').text(gloves.length);
-    $('#gloves').text(chests.length);
+    $('#chests').text(chests.length);
+    $('#gloves').text(gloves.length);
+    $('#boots').text(boots.length);
     $('#rings').text(rings.length);
     $('#amulets').text(amulets.length);
     $('#belts').text(belts.length);

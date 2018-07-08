@@ -7,7 +7,7 @@ module.exports = {
     chaosWindow: null,
     inicia() {
         let { screen } = require('electron');
-        let altura = 370;
+        let altura = 390;
         let largura = 175;
         let mainScreen = screen.getPrimaryDisplay();
         let caminhoView = `file://${__dirname}/../../../app/`;
